@@ -1,0 +1,16 @@
+# Part of Test - Classes or interfaces with class / method / field including the '$' sign.
+# Offender
+# <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/Avoid$Signs>
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK WHERE {
+    {
+        # need to get to the bottom of this prefix issue and "/" because the subject will be more elegant with a prefix
+	<http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/Avoid$Signs> a java:Class ;
+		rdfs:label ?className .
+        
+	FILTER (REGEX(?className, ".[$]"))
+    }
+}

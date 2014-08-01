@@ -1,0 +1,13 @@
+# OverlaodedMethodClass must have three methods represented in the Sparqlycode
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+
+ASK WHERE {
+     
+     SELECT (COUNT(?method) AS ?number)  
+          WHERE  {  subject:OverloadedMethodClass java:method ?method . }
+          HAVING ( ?number = 3 )
+
+}

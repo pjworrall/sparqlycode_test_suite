@@ -6,11 +6,68 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Test Suite</name>
 	<description>This is a project specifically for generating sparqlycode rdf used for testing the Sparqlycode engine</description>
+
+	<properties>
+		<sparqlycode.lib>/Users/pjworrall/Documents/sparqlycode/lib</sparqlycode.lib>
+		<subpackage>net.interition.sparqlycode</subpackage>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
+			<!-- we have unit test cases in the main code that we are testing so need 
+				this dependency in compile scope -->
+			<!-- <scope>test</scope> -->
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>apache-jena-libs</artifactId>
+			<type>pom</type>
+			<version>2.11.2</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.9.1</version>
+					<configuration>
+						<doclet>net.interition.sparqlycode.doclet.RdfDoclet</doclet>
+						<docletPath>${sparqlycode.lib}/sparqlycode-maven-plugin.jar:${sparqlycode.lib}/jena-core-2.11.1.jar:${sparqlycode.lib}/jena-arq-2.11.1.jar:${sparqlycode.lib}/jena-iri-1.0.1.jar:${sparqlycode.lib}/slf4j-log4j12-1.6.4.jar:${sparqlycode.lib}/jcl-over-slf4j-1.6.4.jar:${sparqlycode.lib}/slf4j-api-1.6.4.jar:${sparqlycode.lib}/log4j-1.2.16.jar:${sparqlycode.lib}/xml-apis-1.4.01.jar:${sparqlycode.lib}/xercesImpl-2.11.0.jar</docletPath>
+						<javadocVersion>1.7</javadocVersion>
+						<useStandardDocletOptions>false</useStandardDocletOptions>
+						<detail>true</detail>
+						<failOnError>true</failOnError>
+						<debug>true</debug>
+						<show>private</show>
+						<additionalparam>-file sparqlycode.ttl</additionalparam>
+						<additionalparam>-baseuri
+							http://www.interition.net/sparqlycode/id/</additionalparam>
+						<subpackages>${subpackage}</subpackages>
+						<reportOutputDirectory>${basedir}/src/test</reportOutputDirectory>
+					    <destDir>resources</destDir>
+					</configuration>
+					<executions>
+						<execution>
+							<id>in-build</id>
+							<phase>generate-test-sources</phase>
+							<goals><goal>javadoc</goal></goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
 </project>

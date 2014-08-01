@@ -1,5 +1,10 @@
 package net.interition.sparqlycode.testsuite;
 
+/**
+ * @author Paul Worrall, Interition Ltd
+ *
+ */
+
 public class OverloadedMethodClass {
 	
 	private String mothersName;
@@ -23,6 +28,7 @@ public class OverloadedMethodClass {
 		this.mothersName = mothersName;
 	}
 	
+	// this makes the sparqlycode test break
+	//public void poo() {}
 	
-
 }

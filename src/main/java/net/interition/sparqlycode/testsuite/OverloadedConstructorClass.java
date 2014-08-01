@@ -1,5 +1,10 @@
 package net.interition.sparqlycode.testsuite;
 
+/**
+ * @author Paul Worrall, Interition Ltd
+ *
+ */
+
 public class OverloadedConstructorClass {
 	
 	private String mothersName;
