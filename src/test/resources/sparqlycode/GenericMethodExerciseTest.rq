@@ -1,0 +1,13 @@
+# OverlaodedMethodClass must have three methods represented in the Sparqlycode
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT * WHERE {
+     
+     ?class a java:Class ; rdfs:label "GenericMethodExercise" .
+       ?class java:method ?method .
+       ?method rdfs:label ?name .
+     
+
+}

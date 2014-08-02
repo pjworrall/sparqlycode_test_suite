@@ -1,6 +1,7 @@
 package net.interition.sparqlycode.testsuite;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 
 import org.apache.commons.io.IOUtils;
@@ -60,7 +61,9 @@ public class SparqlycodeBaseTest {
 
 		URL url = this.getClass().getResource(filename);
 		
-		if(url == null) log.debug("sparql query file [" + filename + "] not found on classpath" );
+		if(url == null) { 
+			throw new FileNotFoundException("sparql query file [" + filename + "] not found on classpath" );
+		}
 
 		String query = null ;
 		FileInputStream inputStream = new FileInputStream(url.getPath());
@@ -69,6 +72,8 @@ public class SparqlycodeBaseTest {
 		} finally {
 			inputStream.close();
 		}
+		
+		if(query == null) log.debug("SPARQL Query " + name + "not found or empty");
 		
 		return query;
 		
