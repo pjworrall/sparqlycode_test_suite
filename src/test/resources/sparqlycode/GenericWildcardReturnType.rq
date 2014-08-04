@@ -1,4 +1,4 @@
-# this is for testing queries
+# Test that sparqlycode reflects a wildcard type with extends bound 
 
 PREFIX sc:   <http://www.interition.net/sparqlycode/id/>
 PREFIX java: <http://www.interition.net/java/ref/>

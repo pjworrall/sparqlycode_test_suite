@@ -58,9 +58,14 @@ public class GenericMethodExerciseTest extends SparqlycodeBaseTest {
 	
 	@Test
 	public void genericReturnTypeTest() throws Exception {
-		// Test an argument is declared as generic on the toList method
-		assertTrue("GenericReturnTypeTest encountered a problem with the sparqlycode RDF",
-				sparqlyCodeTest("GenericReturnTypeTest"));
+		
+		// tests that a staight return type is modelled correctly
+		//assertTrue("GenericReturnType encountered a problem with the sparqlycode RDF",
+		//		sparqlyCodeTest("GenericReturnType"));
+		
+		// Test that a wildecard return type is modelled correctly
+		assertTrue("GenericWildcardReturnType encountered a problem with the sparqlycode RDF",
+				sparqlyCodeTest("GenericWildcardReturnType"));
 	}
 
 }
