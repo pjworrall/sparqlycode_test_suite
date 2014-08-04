@@ -20,6 +20,12 @@ import java.util.Map;
 
 public class GenericMethodExercise {
 
+	// bring old fashioned raw type
+	public static String toList(String what){
+		return "it";
+	}
+	
+	
 	// example of an ordinary method declaration
 	public static List<String> toList(String[] arr) {
 		List<String> list = new ArrayList<String>();

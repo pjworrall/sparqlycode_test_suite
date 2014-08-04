@@ -1,5 +1,4 @@
-# GenericMethodExercise must have one String parameter represented in the Sparqlycode
-# This test needs to do something more specific for testing generics
+# GenericMethodExercise must declare the generic types in the toList method signature
 
 PREFIX sc:   <http://www.interition.net/sparqlycode/id/>
 PREFIX java: <http://www.interition.net/java/ref/>
@@ -11,9 +10,12 @@ ASK WHERE {
      SELECT (COUNT(?method) AS ?number)  
           WHERE  {  
           	subject:GenericMethodExercise java:method ?method .
+          	# we are interested in the toList method
             ?method rdfs:label "toList" .
-            ?method java:argument/java:type <http://www.interition.net/sparqlycode/id/java/lang/String> .
+            ?method java:argument ?arguments .
+            ?arguments java:type <http://www.interition.net/sparqlycode/id/java/lang/String> .
+            ?arguments rdfs:label "what" .
           }
-     HAVING ( ?number = 2 )
+     HAVING ( ?number = 1 )
 
 }

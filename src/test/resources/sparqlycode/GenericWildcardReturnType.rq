@@ -9,11 +9,12 @@ ASK WHERE {
 
 	SELECT (COUNT(?extends) AS ?number)  
           WHERE  {  
-          	subject:GenericMethodExercise java:method ?method .
+            subject:GenericMethodExercise java:method ?method .
             ?method rdfs:label "wildecardReturn" .
-            ?method java:returns/java:typeParameter/java:argument/java:extends ?extends .
-            # check they have labels as well, watch as it goes back the way it came t grab label
-            ?argument java:extends ?extends ; rdfs:label ?name .
+            ?method java:returns ?returns .
+            ?returns java:typeParameter ?typeParameter .
+            ?typeParameter java:argument ?argument .
+            ?argument java:extends ?extends .
 			}
 	 	HAVING ( ?number = 2 )
 

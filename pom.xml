@@ -58,7 +58,7 @@
 						<reportOutputDirectory>${basedir}/src/test</reportOutputDirectory>
 					    <destDir>resources</destDir>
 					</configuration>
-					<!-- thought I better mention that the execution decleration is NOT working. Here to remidn me to fix it. -->
+					<!-- thought I better mention that the execution declaration is NOT working. Here to remind me to fix it. -->
 					<executions>
 						<execution>
 							<id>in-build</id>

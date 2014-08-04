@@ -8,10 +8,7 @@ PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqly
 SELECT * WHERE {
 
           	subject:GenericMethodExercise java:method ?method .
-            ?method rdfs:label "wildecardReturn" .
-            ?method java:returns/java:typeParameter/java:argument/java:extends ?extends .
-            # check they have labels as well
-            ?argument java:extends ?extends ; rdfs:label ?name .
-            
-
+            ?method rdfs:label "toList" .
+            ?method java:argument/java:type ?type .
+            #?method java:argument/java:type <http://www.interition.net/sparqlycode/id/java/lang/String> .
 }

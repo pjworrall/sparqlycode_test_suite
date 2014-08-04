@@ -67,5 +67,13 @@ public class GenericMethodExerciseTest extends SparqlycodeBaseTest {
 		assertTrue("GenericWildcardReturnType encountered a problem with the sparqlycode RDF",
 				sparqlyCodeTest("GenericWildcardReturnType"));
 	}
+	
+	@Test
+	public void nonGenericMethodArgumentsTest() throws Exception {
+		
+		assertTrue("PlainOldStringMethodArgumentTest encountered a problem with the sparqlycode RDF",
+				sparqlyCodeTest("PlainOldStringMethodArgumentTest"));
+		
+	}
 
 }

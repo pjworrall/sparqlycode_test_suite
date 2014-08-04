@@ -1,0 +1,29 @@
+# MethodArgumentWithParameterType checks that a method has an argument with a particular parameter type declaration
+
+PREFIX sc:   <http://www.interition.net/sparqlycode/id/>
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+
+ASK WHERE {
+
+     SELECT (COUNT(?typeArgument) AS ?number)  
+          WHERE  {  
+          	subject:GenericMethodExercise java:method ?method .
+          	# we are interested in the subtyped method
+            ?method rdfs:label "subtyped" .
+            # and its arguments
+            ?method java:argument ?argument .
+            
+            # those arguments which have a type of List with a type parameter
+            ?argument java:type <http://www.interition.net/sparqlycode/id/java/util/List> ;
+            	 java:typeParameter ?typeParameter .
+            
+            # get the type parameters argument
+            ?typeParameter java:argument ?typeArgument .
+            # it should be a wildecard with an extend bound on Number
+            ?typeArgument rdfs:label "?" ; java:extends  <http://www.interition.net/sparqlycode/id/java/lang/Number> .
+          }
+     HAVING ( ?number = 1 )
+
+}
