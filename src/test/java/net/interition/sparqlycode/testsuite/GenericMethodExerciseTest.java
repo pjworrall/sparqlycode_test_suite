@@ -34,9 +34,8 @@ public class GenericMethodExerciseTest extends SparqlycodeBaseTest {
 		String firstname = bluesman.get(2);
 		assertEquals("String[] to List<String> conversion",firstname,"Rory");
 		
-		// Sparqlycode test
-		String query = getQuery("NonGenericToListTest");
-		assertTrue("NonGenericToListTest encountered a problem with the sparqlycode RDF",ask(query));
+		assertTrue("NonGenericToListTest encountered a problem with the sparqlycode RDF",
+				sparqlyCodeTest("NonGenericToListTest"));
 	}
 	
 	@Test
@@ -47,15 +46,21 @@ public class GenericMethodExerciseTest extends SparqlycodeBaseTest {
 		String firstname = bluesman.get(3);
 		assertEquals("String[] to List<String> conversion",firstname,"Eric");
 		
-		String query = null;
 		// Test the generic methods declare the type variables in the method signature
 		// Test an argument is declared as generic on the toList method
-		query = getQuery("GenericTypeDeclaredByMethodTest");
-		assertTrue("GenericTypeDeclaredByMethod encountered a problem with the sparqlycode RDF",ask(query));
+		assertTrue("GenericTypeDeclaredByMethod encountered a problem with the sparqlycode RDF",
+				sparqlyCodeTest("GenericTypeDeclaredByMethodTest"));
 		
 		// Test an argument is declared as generic on the toList method
-		query = getQuery("GenericTypeArgumentTest");
-		assertTrue("GenericTypeArgumentTest encountered a problem with the sparqlycode RDF",ask(query));
+		assertTrue("GenericTypeArgumentTest encountered a problem with the sparqlycode RDF",
+				sparqlyCodeTest("GenericTypeDeclaredByMethodTest"));
+	}
+	
+	@Test
+	public void genericReturnTypeTest() throws Exception {
+		// Test an argument is declared as generic on the toList method
+		assertTrue("GenericReturnTypeTest encountered a problem with the sparqlycode RDF",
+				sparqlyCodeTest("GenericReturnTypeTest"));
 	}
 
 }

@@ -24,8 +24,8 @@ public class OverloadedMethodClassTest extends SparqlycodeBaseTest {
 	
 	@Test
 	public void numberOfMethodsUnexpected() throws Exception {
-		String query = getQuery("OverloadedMethodClassTest");
-		assertTrue("OverloadedMethodClassTest had unexpected number of methods",ask(query));
+		assertTrue("OverloadedMethodClassTest had unexpected number of methods",
+				sparqlyCodeTest("OverloadedMethodClassTest"));
 	}
 
 }

@@ -14,7 +14,9 @@ package net.interition.sparqlycode.testsuite;
  */
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class GenericMethodExercise {
 
@@ -52,6 +54,29 @@ public class GenericMethodExercise {
 		for (T elt : arr)
 			list.add(elt);
 	}
+
+	// a generics based method
+	public static <T> List<T> toAnotherList(T[] arr) {
+		List<T> list = new ArrayList<T>();
+
+		for (T elt : arr)
+			list.add(elt);
+		return list;
+	}
+	
+	// a generic method with an argument bound by a subtype
+		public List<Number> subtyped(List<? extends Number> arr) {
+			List<Number> list = new ArrayList<Number>();
+			for (Number elt : arr)
+				list.add(elt);
+			return list;
+		}
+		
+		public Map<? extends String,? extends Number> wildecardReturn(String key, String value) {
+			Map<String,Double> map = new HashMap<String, Double>();
+			map.put("Poo",new Double(10.99));
+			return map;
+		}
 
 	// two types
 	// public static <A,B> void addAll(List<A> list, B... arr) {

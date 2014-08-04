@@ -44,7 +44,8 @@ public class SparqlycodeBaseTest {
 
 	}
 	
-	public boolean ask(String query) {
+
+	private boolean ask(String query) {
 
  	    Query sparqlQuery = QueryFactory.create(query) ;
  	
@@ -55,7 +56,8 @@ public class SparqlycodeBaseTest {
 		return result;
 		}
 	
-	public String getQuery(String name) throws Exception {
+
+	private String getQuery(String name) throws Exception {
 		
 		String filename = sparqlyQueryFolder + name + sparqlyQueryExt;
 
@@ -76,6 +78,15 @@ public class SparqlycodeBaseTest {
 		if(query == null) log.debug("SPARQL Query " + name + "not found or empty");
 		
 		return query;
+		
+	}
+	
+	/*
+	 * the exception on this needs to be specialised to Sparqlycode
+	 */
+	public boolean sparqlyCodeTest(String name) throws Exception {
+		String query = getQuery(name);
+		return ask(query);
 		
 	}
 
