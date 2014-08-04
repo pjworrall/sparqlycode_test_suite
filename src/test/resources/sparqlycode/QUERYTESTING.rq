@@ -5,16 +5,11 @@ PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
 
-SELECT ?typeParameter ?type ?name ?extends WHERE {
+SELECT * WHERE {
 
           	subject:GenericMethodExercise java:method ?method .
-            ?method rdfs:label "wildecardReturn" .
-            ?method java:returns ?returns .
-            ?returns java:typeParameter ?typeParameter .
-            
-           	?typeParameter java:type ?type .
-           	?type rdfs:label ?name.
-           
-			optional { ?type java:extends ?extends }
+            ?method rdfs:label "subtyped" .
+            ?method java:returns/java:typeParameter/java:type  ?type .
+            ?type java:type ?o .
 
 }
