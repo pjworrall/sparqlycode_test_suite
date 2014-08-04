@@ -8,7 +8,7 @@
 	<description>This is a project specifically for generating sparqlycode rdf used for testing the Sparqlycode engine</description>
 
 	<properties>
-		<sparqlycode.lib>/Users/pjworrall/Documents/sparqlycode/lib</sparqlycode.lib>
+		<sparqlycode.lib>${env.SPARQLYCODE_HOME}/lib</sparqlycode.lib>
 		<subpackage>net.interition.sparqlycode</subpackage>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
