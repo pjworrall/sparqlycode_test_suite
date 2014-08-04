@@ -11,7 +11,7 @@ ASK WHERE {
           WHERE  {  
           	subject:GenericMethodExercise java:method ?method .
             ?method rdfs:label "wildecardReturn" .
-            ?method java:returns/java:typeParameter/java:type/java:extends ?typeParameter .
+            ?method java:returns/java:typeParameter/java:argument/java:extends ?typeParameter .
 			}
 	 	HAVING ( ?number = 2 )
 
