@@ -39,7 +39,6 @@ public class SparqlycodeBaseTest {
 		this.model = ModelFactory.createDefaultModel();
 		
 		URL kb = this.getClass().getResource("/sparqlycode.ttl");
-		log.debug("file url was: " + kb) ;
 		model.read(kb.toString());
 
 	}

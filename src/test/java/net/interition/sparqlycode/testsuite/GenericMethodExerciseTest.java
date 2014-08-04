@@ -60,8 +60,8 @@ public class GenericMethodExerciseTest extends SparqlycodeBaseTest {
 	public void genericReturnTypeTest() throws Exception {
 		
 		// tests that a staight return type is modelled correctly
-		//assertTrue("GenericReturnType encountered a problem with the sparqlycode RDF",
-		//		sparqlyCodeTest("GenericReturnType"));
+		assertTrue("GenericReturnType encountered a problem with the sparqlycode RDF",
+				sparqlyCodeTest("GenericReturnType"));
 		
 		// Test that a wildecard return type is modelled correctly
 		assertTrue("GenericWildcardReturnType encountered a problem with the sparqlycode RDF",
