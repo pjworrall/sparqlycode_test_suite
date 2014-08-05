@@ -75,5 +75,13 @@ public class GenericMethodExerciseTest extends SparqlycodeBaseTest {
 				sparqlyCodeTest("PlainOldStringMethodArgumentTest"));
 		
 	}
+	
+	@Test
+	public void typedMethodArgumentTest() throws Exception {
+		
+		assertTrue("Method argument for 'toList' should be generic type <T>",
+				sparqlyCodeTest("GenericMethodArgumentType"));
+		
+	}
 
 }
