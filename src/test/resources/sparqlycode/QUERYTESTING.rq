@@ -3,17 +3,12 @@
 PREFIX sc:   <http://www.interition.net/sparqlycode/id/>
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX subject: <http://www.interition.net/sparqlycode/id/net.interition.sparqlycode.testsuite.>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
 
 SELECT * WHERE {
 
-     
-            subject:GenericMethodExercise java:method ?method .
-          	# we are interested in the toList method
+          	subject:GenericMethodExercise java:method ?method .
             ?method rdfs:label "toList" .
-            ?method java:argument ?arguments .
-            #?arguments java:type <http://www.interition.net/sparqlycode/id/java.lang.String> .
-            #?arguments rdfs:label "what" .
-     
-
+            ?method java:argument/java:type ?type .
+            #?method java:argument/java:type <http://www.interition.net/sparqlycode/id/java/lang/String> .
 }
