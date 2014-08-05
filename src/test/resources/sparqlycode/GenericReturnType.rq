@@ -3,7 +3,7 @@
 PREFIX sc:   <http://www.interition.net/sparqlycode/id/>
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net.interition.sparqlycode.testsuite.>
 
 ASK WHERE {
 
@@ -11,7 +11,7 @@ ASK WHERE {
           WHERE  {  
           	subject:GenericMethodExercise java:method ?method .
             ?method rdfs:label "subtyped" .
-            ?method java:returns/java:typeParameter/java:argument  <http://www.interition.net/sparqlycode/id/java/lang/Number> .
+            ?method java:returns/java:typeParameter/java:argument  <http://www.interition.net/sparqlycode/id/java.lang.Number> .
           }
      HAVING ( ?number = 1 )
 

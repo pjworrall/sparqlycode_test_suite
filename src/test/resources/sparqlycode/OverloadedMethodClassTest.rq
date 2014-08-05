@@ -2,7 +2,7 @@
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net.interition.sparqlycode.testsuite.>
 
 ASK WHERE {
      
