@@ -7,5 +7,8 @@ public abstract class AbstractClassWithoutAbstractMethod {
 		i++;
 		System.out.println(i);
 	}
+	
+	// Uncomment the below line to make the test pass.
+	//	public abstract void doMoreStuff (int anInt);
 }
 
