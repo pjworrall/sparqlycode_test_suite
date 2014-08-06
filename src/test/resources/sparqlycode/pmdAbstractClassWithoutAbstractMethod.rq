@@ -11,8 +11,8 @@ ASK WHERE {
 		subject:AbstractClassWithoutAbstractMethod java:isAbstract true .
 		subject:AbstractClassWithoutAbstractMethod rdfs:label ?name .
 			FILTER NOT EXISTS {
-			subject:AbstractClassWithoutAbstractMethod java:method ?method .
+				subject:AbstractClassWithoutAbstractMethod java:method ?method .
 				?method java:isAbstract true .
 			} 
-	} HAVING (?number > 0)
+	} HAVING (?number = 0)
 }
