@@ -1,0 +1,13 @@
+# Finds methods with over 30 import statements.
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+
+ASK WHERE {
+	SELECT (COUNT(?imports) AS ?totalImports)
+		WHERE {
+			subject:ExcessiveImports java:imports ?imports .
+		}
+		HAVING (?totalImports < 30)
+}

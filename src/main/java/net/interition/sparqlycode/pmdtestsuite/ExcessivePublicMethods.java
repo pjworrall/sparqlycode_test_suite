@@ -8,6 +8,7 @@ public class ExcessivePublicMethods {
 	private int g ;private int h ;private int i ;
 	private int j ;private int k ;private int l ;
 
+	// Comment out the below methods to make the test pass.
 	public int getA() {
 		return a;
 	}

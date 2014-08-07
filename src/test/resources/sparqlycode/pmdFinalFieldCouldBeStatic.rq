@@ -1,0 +1,15 @@
+# This finds classes with final field declarations that aren't static
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK WHERE {
+	SELECT (COUNT(?field) AS ?number) 
+		WHERE {
+    		subject:FinalFieldCouldBeStatic java:field ?field .
+    		?field java:isFinal true .
+    		FILTER NOT EXISTS {?field java:isStatic true}
+		} HAVING (?number = 0)
+}
