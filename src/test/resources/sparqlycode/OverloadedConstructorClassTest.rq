@@ -1,0 +1,13 @@
+# OverlaodedMethodClass must have three methods represented in the Sparqlycode
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+
+ASK WHERE {
+     
+     SELECT (COUNT(?constructor) AS ?number)  
+          WHERE  {  subject:OverloadedConstructorClass java:constructor ?constructor . }
+          HAVING ( ?number = 3 )
+
+}
