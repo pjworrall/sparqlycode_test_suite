@@ -1,0 +1,20 @@
+# Find interfaces with name / method / field including the '$' sign.
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/Avoid$Signs/>
+
+ASK WHERE {
+	SELECT (COUNT (?className) AS ?number)
+		WHERE {
+			subject:InterfaceWith\$s rdfs:label ?className .
+			OPTIONAL {
+    					subject:InterfaceWith\$s java:field ?field .
+    					?field rdfs:label ?fieldName .
+    					subject:InterfaceWith\$s java:method ?method .
+    					?method rdfs:label ?methodName .
+    		}
+		FILTER (REGEX(?className, ".[$]") || REGEX(?fieldName, ".[$]") || REGEX(?methodName, ".[$]"))
+		} HAVING (?number = 0)
+}

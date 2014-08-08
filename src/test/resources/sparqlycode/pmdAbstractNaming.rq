@@ -1,0 +1,15 @@
+# Finds abstract classes whose name does not start with 'Abstract'.
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+
+ASK WHERE {
+SELECT (COUNT(?className) AS ?number)
+	WHERE {
+		subject:Naming java:isAbstract true .
+		subject:Naming rdfs:label ?className .
+		FILTER  (REGEX (?className,  "^(?!Abstract).+"))
+	} HAVING (?number = 0)
+}

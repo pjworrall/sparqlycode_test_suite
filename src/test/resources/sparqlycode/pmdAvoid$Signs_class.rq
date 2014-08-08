@@ -1,0 +1,20 @@
+# Find classes with name / method / field including the '$' sign.
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+
+ASK WHERE {
+	SELECT (COUNT(?className) AS ?number)
+		WHERE {
+			subject:Avoid\$Signs rdfs:label ?className .
+			OPTIONAL {
+    				subject:Avoid\$Signs java:field ?field .
+    				?field rdfs:label ?fieldName .
+    				subject:Avoid\$Signs java:method ?method .
+    				?method rdfs:label ?methodName .
+    		}
+			FILTER (REGEX(?className, ".[$]") || REGEX(?fieldName, ".[$]") || REGEX(?methodName, ".[$]"))
+		} HAVING (?number = 0)
+}

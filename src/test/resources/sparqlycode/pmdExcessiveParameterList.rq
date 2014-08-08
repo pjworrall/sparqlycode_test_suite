@@ -1,0 +1,16 @@
+# This finds methods and their respective classes with an excessive number of parameters. Eg 5
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK WHERE {
+	SELECT (COUNT(?argName) AS ?totalArguments) 
+	WHERE {  
+		subject:ExcessiveParameterList java:method ?method .
+    	?method java:argument ?arg .
+    	?arg rdfs:label ?argName
+	}
+	HAVING (?totalArguments < 5)
+}

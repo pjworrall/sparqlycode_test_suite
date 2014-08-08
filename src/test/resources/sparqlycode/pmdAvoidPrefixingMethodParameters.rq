@@ -1,0 +1,16 @@
+# Finds methods with parameters prefixed with 'in' or 'out'.
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+
+ASK WHERE {
+	SELECT (COUNT (?method) AS ?number)
+		WHERE {
+			subject:AvoidPrefixingMethodParameters java:method ?method .
+			?method java:argument ?arg .
+			?arg rdfs:label ?argName .
+			FILTER (REGEX (?argName, "^in[A-Z].*") || REGEX (?argName, "^out[A-Z].*") || REGEX (?argName, "^in$','^out$"))
+		} HAVING (?number = 0)
+}

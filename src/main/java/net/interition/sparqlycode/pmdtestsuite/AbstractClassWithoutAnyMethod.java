@@ -6,4 +6,9 @@ public abstract class AbstractClassWithoutAnyMethod {
 	public AbstractClassWithoutAnyMethod (int a) {
 		anInt = a;
 	}
+	
+// Uncomment the following method to make the test pass
+//	private void stuff () {
+//		int i = 0;
+//	}
 }

@@ -1,0 +1,18 @@
+# This finds abstract classes that have no abstract methods in them.
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+
+
+ASK WHERE {
+	SELECT (COUNT(?name) AS ?number)  WHERE {
+		subject:AbstractClassWithoutAbstractMethod java:isAbstract true .
+		subject:AbstractClassWithoutAbstractMethod rdfs:label ?name .
+			FILTER NOT EXISTS {
+				subject:AbstractClassWithoutAbstractMethod java:method ?method .
+				?method java:isAbstract true .
+			} 
+	} HAVING (?number = 0)
+}
