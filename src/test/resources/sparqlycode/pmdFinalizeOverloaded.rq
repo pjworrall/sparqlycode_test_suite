@@ -1,0 +1,20 @@
+# This finds any overloaded instances of the void finalize() method. It should not have any parameters.
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sc: <http://www.interition.net/sparqlycode/id/>
+
+ASK WHERE {
+	SELECT (COUNT(?arg) AS ?number)
+		WHERE {
+			subject:FinalizeOverloaded java:method ?method .
+			?method rdfs:label ?methodName .
+			?method java:returns ?returnType .
+			?returnType java:type sc:void .
+			?method java:argument ?arg .
+			FILTER (?methodName="finalize")
+		} HAVING (?number = 0)
+}
+		
