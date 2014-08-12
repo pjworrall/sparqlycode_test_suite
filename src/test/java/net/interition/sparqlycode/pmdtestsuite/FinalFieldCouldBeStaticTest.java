@@ -22,7 +22,7 @@ public class FinalFieldCouldBeStaticTest extends SparqlycodeBaseTest {
 	}
 	
 	@Test
-	public void isFinalFieldStaticTest() throws Exception {
+	public void testIsFinalFieldStatic() throws Exception {
 		// conventional Java test
 		assertTrue("Final but non-static field found.",
 				sparqlyCodeTest("pmdFinalFieldCouldBeStatic"));

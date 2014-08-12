@@ -22,7 +22,7 @@ public class DoNotUseThreadsTest extends SparqlycodeBaseTest {
 		}
 		
 		@Test
-		public void threadsTest() throws Exception {
+		public void testThreads() throws Exception {
 			// conventional Java test
 			assertTrue("Class extends Thread and / or implements Runnable.",
 					sparqlyCodeTest("pmdDoNotUseThreads"));

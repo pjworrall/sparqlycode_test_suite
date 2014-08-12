@@ -23,7 +23,7 @@ public class JUnit4TestShouldUseAfterAnnotationTest extends SparqlycodeBaseTest 
 	}
 	
 	@Test
-	public void jUnitUsingAfterAnnotationTest() throws Exception {
+	public void testJUnitUsingAfterAnnotation() throws Exception {
 		// conventional Java test
 		assertTrue("Method 'tearDown()' found with no '@After' annotation.",
 				sparqlyCodeTest("pmdJUnit4TestShouldUseAfterAnnotation"));

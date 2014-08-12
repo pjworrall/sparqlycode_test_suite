@@ -24,7 +24,7 @@ public class AvoidProtectedMethodInFinalClassNotExtendingTest extends
 		}
 		
 		@Test
-		public void protectedMethodTest() throws Exception {
+		public void testProtectedMethod() throws Exception {
 			// conventional Java test
 			assertTrue("Protected method found in a final class that doesn't extend any other classes.",
 					sparqlyCodeTest("pmdAvoidProtectedMethodInFinalClassNotExtending"));

@@ -23,7 +23,7 @@ public class JUnit4TestShouldUseTestAnnotationTest extends SparqlycodeBaseTest {
 	}
 	
 	@Test
-	public void jUnitUsingTestAnnotationTest() throws Exception {
+	public void testJUnitUsingTestAnnotation() throws Exception {
 		// conventional Java test
 		assertTrue("A method prefixed with the word 'test' was found that is not using the '@Test' annotation.",
 				sparqlyCodeTest("pmdJUnit4TestShouldUseTestAnnotation"));

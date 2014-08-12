@@ -22,7 +22,7 @@ public class AbstractNamingTest extends SparqlycodeBaseTest {
 		}
 		
 		@Test
-		public void abstractClassNamingTest() throws Exception {
+		public void testAbstractClassNaming() throws Exception {
 			// conventional Java test
 			assertTrue("Abstract class found no prefix 'Abstract' in the class name.",
 					sparqlyCodeTest("pmdAbstractNaming"));

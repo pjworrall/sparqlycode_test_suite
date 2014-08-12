@@ -23,7 +23,7 @@ public class AvoidProtectedFieldInFinalClassTest extends SparqlycodeBaseTest {
 		}
 		
 		@Test
-		public void protectedFieldTest() throws Exception {
+		public void testProtectedField() throws Exception {
 			// conventional Java test
 			assertTrue("Protected field found in a final class.",
 					sparqlyCodeTest("pmdAvoidProtectedFieldInFinalClass"));

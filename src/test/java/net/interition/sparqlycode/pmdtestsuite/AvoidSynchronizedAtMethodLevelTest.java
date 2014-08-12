@@ -23,7 +23,7 @@ public class AvoidSynchronizedAtMethodLevelTest extends SparqlycodeBaseTest {
 		}
 		
 		@Test
-		public void synchronizedMethodTest() throws Exception {
+		public void testSynchronizedMethod() throws Exception {
 			// conventional Java test
 			assertTrue("Synchronized method found. Use 'synchronized' on a block level.",
 					sparqlyCodeTest("pmdAvoidSynchronizedAtMethodLevel"));

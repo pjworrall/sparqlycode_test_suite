@@ -23,7 +23,7 @@ public class FinalizeOverloadedTest extends SparqlycodeBaseTest {
 	}
 	
 	@Test
-	public void finalizeOverloadedTest() throws Exception {
+	public void testFinalizeOverloaded() throws Exception {
 		// conventional Java test
 		assertTrue("Overloaded instance of the 'finalize()' method found.",
 				sparqlyCodeTest("pmdFinalizeOverloaded"));

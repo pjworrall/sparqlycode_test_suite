@@ -23,7 +23,7 @@ public class AvoidConstantsInterfaceTest extends SparqlycodeBaseTest {
 		}
 		
 		@Test
-		public void interfaceWithNoMethodsTest() throws Exception {
+		public void testInterfaceWithNoMethods() throws Exception {
 			// conventional Java test
 			assertTrue("Interface with no method declarations found",
 					sparqlyCodeTest("pmdAvoidConstantsInterface"));

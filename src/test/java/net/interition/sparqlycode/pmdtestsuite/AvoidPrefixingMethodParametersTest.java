@@ -21,7 +21,7 @@ public class AvoidPrefixingMethodParametersTest extends SparqlycodeBaseTest {
 		}
 		
 		@Test
-		public void methodArgumentsPrefixedTest() throws Exception {
+		public void testMethodArgumentsPrefixed() throws Exception {
 			// conventional Java test
 			assertTrue("Prefixed method arguments found.",
 					sparqlyCodeTest("pmdAvoidPrefixingMethodParameters"));

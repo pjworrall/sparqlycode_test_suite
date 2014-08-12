@@ -22,7 +22,7 @@ public class DontImportSunTest  extends SparqlycodeBaseTest{
 			}
 			
 			@Test
-			public void sunImportTest() throws Exception {
+			public void testSunImport() throws Exception {
 				// conventional Java test
 				assertTrue("Class imports a Sun package.",
 						sparqlyCodeTest("pmdDontImportSun"));

@@ -23,7 +23,7 @@ public class BadCloneImplementationTest extends SparqlycodeBaseTest {
 		}
 		
 		@Test
-		public void badCloneImplementationTest() throws Exception {
+		public void testBadCloneImplementation() throws Exception {
 			// conventional Java test
 			assertTrue("Bad implementation of the 'clone' method was found. Extend the 'Cloneable' interface.",
 					sparqlyCodeTest("pmdCloneImplementorMissingCloneableInterface"));

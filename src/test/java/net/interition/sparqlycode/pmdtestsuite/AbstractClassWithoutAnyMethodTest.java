@@ -21,7 +21,7 @@ public class AbstractClassWithoutAnyMethodTest extends SparqlycodeBaseTest {
 		}
 		
 		@Test
-		public void noMethodsTest() throws Exception {
+		public void testNoMethods() throws Exception {
 			// conventional Java test
 			assertTrue("Abstract class with no methods found.",
 					sparqlyCodeTest("pmdAbstractClassWithoutAnyMethod"));

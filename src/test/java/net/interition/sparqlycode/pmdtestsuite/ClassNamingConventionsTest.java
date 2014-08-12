@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import net.interition.sparqlycode.testsuite.SparqlycodeBaseTest;
 
-public class classNamingConventionsTest extends SparqlycodeBaseTest {
+public class ClassNamingConventionsTest extends SparqlycodeBaseTest {
 	
 	/**
 	 * @author Adam Nogradi, Interition Ltd
@@ -23,7 +23,7 @@ public class classNamingConventionsTest extends SparqlycodeBaseTest {
 		}
 		
 		@Test
-		public void classNamingTest() throws Exception {
+		public void testClassNaming() throws Exception {
 			// conventional Java test
 			assertTrue("Lower case class name found.",
 					sparqlyCodeTest("pmdClassNamingConventions"));

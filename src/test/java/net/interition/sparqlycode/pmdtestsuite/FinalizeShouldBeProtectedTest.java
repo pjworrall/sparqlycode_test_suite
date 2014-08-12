@@ -23,7 +23,7 @@ public class FinalizeShouldBeProtectedTest extends SparqlycodeBaseTest {
 	}
 	
 	@Test
-	public void finalizeProtectedTest() throws Exception {
+	public void testFinalizeProtected() throws Exception {
 		// conventional Java test
 		assertTrue("Non-protected instance of the 'finalize()' method found.",
 				sparqlyCodeTest("pmdFinalizeShouldBeProtected"));

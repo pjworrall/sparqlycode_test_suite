@@ -24,7 +24,7 @@ public class JUnit4TestShouldUseBeforeAnnotationTest extends
 	}
 	
 	@Test
-	public void jUnitUsingBeforeAnnotationTest() throws Exception {
+	public void testJUnitUsingBeforeAnnotation() throws Exception {
 		// conventional Java test
 		assertTrue("Method 'setUp()' found with no '@Before' annotation.",
 				sparqlyCodeTest("pmdJUnit4TestShouldUseBeforeAnnotation"));
