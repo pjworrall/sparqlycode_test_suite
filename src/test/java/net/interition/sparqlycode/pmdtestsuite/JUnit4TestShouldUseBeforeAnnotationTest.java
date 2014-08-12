@@ -12,7 +12,8 @@ import net.interition.sparqlycode.testsuite.SparqlycodeBaseTest;
  * @author Adam Nogradi, Interition Ltd.
  *
  */
-public class JUnit4TestShouldUseAfterAnnotationTest extends SparqlycodeBaseTest {
+public class JUnit4TestShouldUseBeforeAnnotationTest extends
+		SparqlycodeBaseTest {
 	
 	/**
 	 * @throws java.lang.Exception
@@ -23,9 +24,9 @@ public class JUnit4TestShouldUseAfterAnnotationTest extends SparqlycodeBaseTest 
 	}
 	
 	@Test
-	public void jUnitUsingAfterAnnotationTest() throws Exception {
+	public void jUnitUsingBeforeAnnotationTest() throws Exception {
 		// conventional Java test
-		assertTrue("Method 'tearDown()' found with no '@After' annotation.",
-				sparqlyCodeTest("pmdJUnit4TestShouldUseAfterAnnotation"));
+		assertTrue("Method 'setUp()' found with no '@Before' annotation.",
+				sparqlyCodeTest("pmdJUnit4TestShouldUseBeforeAnnotation"));
 	}
 }

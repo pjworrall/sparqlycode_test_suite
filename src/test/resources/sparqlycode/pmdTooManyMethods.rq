@@ -1,0 +1,16 @@
+# This finds classes with an excessive number of methods (Eg > 10) excluding getters, setters and is... methods. 
+# Paul Worrall & Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK WHERE {
+	SELECT (COUNT(?method) AS ?totalMethods) 
+		WHERE {  
+    		subject:TooManyMethods java:method ?method .
+    		?method rdfs:label ?methodName .
+    		FILTER (!regex(?methodName,"^get|^set|^is","i" ))
+
+		} HAVING (?totalMethods < 10)
+}

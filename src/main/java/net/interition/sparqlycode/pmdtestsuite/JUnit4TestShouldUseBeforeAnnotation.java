@@ -2,8 +2,14 @@ package net.interition.sparqlycode.pmdtestsuite;
 
 import org.junit.Before;
 
+/**
+ * 
+ * @author Adam Nogradi, Interition Ltd.
+ *
+ */
 public class JUnit4TestShouldUseBeforeAnnotation {
-	// @Before annotation should be used here
+	// Uncomment the below annotation to make the test pass.
+//	@Before
 	public void setUp () {
 		
 	}

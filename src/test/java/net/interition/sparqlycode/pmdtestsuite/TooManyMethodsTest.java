@@ -12,7 +12,7 @@ import net.interition.sparqlycode.testsuite.SparqlycodeBaseTest;
  * @author Adam Nogradi, Interition Ltd.
  *
  */
-public class JUnit4TestShouldUseAfterAnnotationTest extends SparqlycodeBaseTest {
+public class TooManyMethodsTest extends SparqlycodeBaseTest {
 	
 	/**
 	 * @throws java.lang.Exception
@@ -23,9 +23,9 @@ public class JUnit4TestShouldUseAfterAnnotationTest extends SparqlycodeBaseTest 
 	}
 	
 	@Test
-	public void jUnitUsingAfterAnnotationTest() throws Exception {
+	public void testTooManyMethods() throws Exception {
 		// conventional Java test
-		assertTrue("Method 'tearDown()' found with no '@After' annotation.",
-				sparqlyCodeTest("pmdJUnit4TestShouldUseAfterAnnotation"));
+		assertTrue("Class found with over 10 methods.",
+				sparqlyCodeTest("pmdTooManyMethods"));
 	}
 }

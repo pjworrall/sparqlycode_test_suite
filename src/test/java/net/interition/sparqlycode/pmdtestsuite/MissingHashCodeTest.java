@@ -12,7 +12,7 @@ import net.interition.sparqlycode.testsuite.SparqlycodeBaseTest;
  * @author Adam Nogradi, Interition Ltd.
  *
  */
-public class JUnit4TestShouldUseAfterAnnotationTest extends SparqlycodeBaseTest {
+public class MissingHashCodeTest extends SparqlycodeBaseTest {
 	
 	/**
 	 * @throws java.lang.Exception
@@ -23,9 +23,9 @@ public class JUnit4TestShouldUseAfterAnnotationTest extends SparqlycodeBaseTest 
 	}
 	
 	@Test
-	public void jUnitUsingAfterAnnotationTest() throws Exception {
+	public void testNoHashCode() throws Exception {
 		// conventional Java test
-		assertTrue("Method 'tearDown()' found with no '@After' annotation.",
-				sparqlyCodeTest("pmdJUnit4TestShouldUseAfterAnnotation"));
+		assertTrue("Class implementing 'equals(Object o)' but not 'hashCode()' found.",
+				sparqlyCodeTest("pmdMissingHashCode"));
 	}
 }

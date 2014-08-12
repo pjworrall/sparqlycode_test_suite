@@ -12,7 +12,7 @@ import net.interition.sparqlycode.testsuite.SparqlycodeBaseTest;
  * @author Adam Nogradi, Interition Ltd.
  *
  */
-public class JUnit4TestShouldUseAfterAnnotationTest extends SparqlycodeBaseTest {
+public class MethodNamingConventionsTest extends SparqlycodeBaseTest {
 	
 	/**
 	 * @throws java.lang.Exception
@@ -23,9 +23,9 @@ public class JUnit4TestShouldUseAfterAnnotationTest extends SparqlycodeBaseTest 
 	}
 	
 	@Test
-	public void jUnitUsingAfterAnnotationTest() throws Exception {
+	public void testMethodNames() throws Exception {
 		// conventional Java test
-		assertTrue("Method 'tearDown()' found with no '@After' annotation.",
-				sparqlyCodeTest("pmdJUnit4TestShouldUseAfterAnnotation"));
+		assertTrue("Method name starting with upper-case letter or containing underscores found.",
+				sparqlyCodeTest("pmdMethodNamingConventions"));
 	}
 }

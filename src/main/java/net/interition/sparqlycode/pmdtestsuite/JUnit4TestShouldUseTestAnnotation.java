@@ -2,9 +2,15 @@ package net.interition.sparqlycode.pmdtestsuite;
 
 import org.junit.Test;
 
+/**
+ * 
+ * @author Adam Nogradi, Interition Ltd.
+ *
+ */
 public class JUnit4TestShouldUseTestAnnotation {
 	
-	// The @Test annotation should be used here
+	// Uncomment the below annotation to make the test pass.
+//	@Test
 	public void testDoStuff () {
 		
 	}

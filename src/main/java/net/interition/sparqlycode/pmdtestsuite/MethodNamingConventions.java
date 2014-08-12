@@ -1,6 +1,12 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
+/**
+ * 
+ * @author Adam Nogradi, Interition Ltd.
+ *
+ */
 public class MethodNamingConventions {
+	// Comment out the following 3 methods to make the test pass.
 	public void UpperCaseMethod () {
 		
 	}
@@ -11,6 +17,10 @@ public class MethodNamingConventions {
 	
 	protected void Method_with_both_bad_conventions () {
 		
+	}
+	
+	public int goodMethod () {
+		return 2;
 	}
 }
 

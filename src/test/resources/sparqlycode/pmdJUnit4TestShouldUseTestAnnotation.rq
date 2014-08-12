@@ -1,0 +1,16 @@
+# Finds any class that uses a method starting with the word 'test' but not using the @Test annotation.
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK WHERE {
+	SELECT (COUNT(?methodName) AS ?number)
+		WHERE {
+			subject:JUnit4TestShouldUseTestAnnotation java:method ?method .
+			?method rdfs:label ?methodName
+			FILTER (STRSTARTS(STR(?methodName), "test"))
+			FILTER NOT EXISTS {?method java:hasAnnotation <http://www.interition.net/sparqlycode/id/org/junit/Test> .}
+		} HAVING (?number = 0)
+}		

@@ -1,0 +1,19 @@
+# Finds all classes ending with the suffix 'Test' that don't have any test methods in them starting with the prefix 'test'
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK WHERE {
+	SELECT (COUNT(?className) AS ?number)
+		WHERE {
+		subject:TestClassWithoutTestCasesTest rdfs:label ?className .
+		FILTER (STRENDS(STR(?className), "Test"))
+			FILTER NOT EXISTS {
+				subject:TestClassWithoutTestCasesTest java:method ?method .
+				?method rdfs:label ?methodName .
+				?method java:hasAnnotation <http://www.interition.net/sparqlycode/id/org/junit/Test>
+			}
+		} HAVING (?number = 0)
+}
