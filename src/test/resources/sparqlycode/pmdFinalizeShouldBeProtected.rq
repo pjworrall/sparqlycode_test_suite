@@ -1,0 +1,21 @@
+# Checks if there is a public overriding instance of the finalize() method. These should be protected.
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sc: <http://www.interition.net/sparqlycode/id/>
+
+ASK WHERE {
+	SELECT (COUNT (?methodName) AS ?number)
+		WHERE {
+			subject:FinalizeShouldBeProtected java:method ?method .
+			?method rdfs:label ?methodName .
+			?method java:returns ?returnType .
+			?returnType java:type sc:void .
+			FILTER NOT EXISTS { 
+						?method java:access "Protected" . 
+						?method java:argument ?arg .
+			} .
+		} HAVING (?number > 0)
+}

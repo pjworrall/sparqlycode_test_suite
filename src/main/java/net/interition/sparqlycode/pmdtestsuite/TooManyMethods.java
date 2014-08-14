@@ -1,6 +1,10 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-
+/**
+ * 
+ * @author Paul Worrall & Adam Nogradi, Interition Ltd.
+ *
+ */
 
 public class TooManyMethods {
 	
@@ -10,99 +14,100 @@ public class TooManyMethods {
 	private int j ;private int k ;private int l ;
 	private boolean boo; private boolean too;
 
-	public int getA() {
+	// Comment out the following methods to make the test pass.
+	public int gA() {
 		return a;
 	}
 
-	public void setA(int a) {
+	public void sA(int a) {
 		this.a = a;
 	}
 
-	public int getB() {
+	public int gB() {
 		return b;
 	}
 
-	public void setB(int b) {
+	public void sB(int b) {
 		this.b = b;
 	}
 
-	public int getC() {
+	public int gC() {
 		return c;
 	}
 
-	public void setC(int c) {
+	public void sC(int c) {
 		this.c = c;
 	}
 
-	public int getD() {
+	public int gD() {
 		return d;
 	}
 
-	public void setD(int d) {
+	public void sD(int d) {
 		this.d = d;
 	}
 
-	public int getE() {
+	public int gE() {
 		return e;
 	}
 
-	public void setE(int e) {
+	public void sE(int e) {
 		this.e = e;
 	}
 
-	public int getF() {
+	public int gF() {
 		return f;
 	}
 
-	public void setF(int f) {
+	public void sF(int f) {
 		this.f = f;
 	}
 
-	public int getG() {
+	public int gG() {
 		return g;
 	}
 
-	public void setG(int g) {
+	public void sG(int g) {
 		this.g = g;
 	}
 
-	public int getH() {
+	public int gH() {
 		return h;
 	}
 
-	public void setH(int h) {
+	public void sH(int h) {
 		this.h = h;
 	}
 
-	public int getI() {
+	public int gI() {
 		return i;
 	}
 
-	public void setI(int i) {
+	public void sI(int i) {
 		this.i = i;
 	}
 
-	public int getJ() {
+	public int gJ() {
 		return j;
 	}
 
-	public void setJ(int j) {
+	public void sJ(int j) {
 		this.j = j;
 	}
 
-	public int getK() {
+	public int gK() {
 		return k;
 	}
 
-	public void setK(int k) {
+	public void sK(int k) {
 		this.k = k;
 	}
 
-	public int getL() {
+	public int gL() {
 		return l;
 	}
 
-	public void setL(int l) {
+	public void sL(int l) {
 		this.l = l;
 	}
 
@@ -110,7 +115,7 @@ public class TooManyMethods {
 		return boo;
 	}
 
-	public void setBoo(boolean boo) {
+	public void sBoo(boolean boo) {
 		this.boo = boo;
 	}
 
@@ -118,13 +123,8 @@ public class TooManyMethods {
 		return too;
 	}
 
-	public void setToo(boolean too) {
+	public void sToo(boolean too) {
 		this.too = too;
 	}
 	
-	// this method does not get picked up in the method count test
-	public void notCountedMethod() {
-		// does nothing
-	}
-
 }

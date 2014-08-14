@@ -23,7 +23,7 @@ public class ClassNamingConventionsTest extends SparqlycodeBaseTest {
 		}
 		
 		@Test
-		public void classNamingTest() throws Exception {
+		public void testClassNaming() throws Exception {
 			// conventional Java test
 			assertFalse("Lower case class name found.",
 					sparqlyCodeTest("pmdClassNamingConventions"));

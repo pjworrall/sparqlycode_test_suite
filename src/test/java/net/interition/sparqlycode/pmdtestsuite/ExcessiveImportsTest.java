@@ -22,7 +22,7 @@ public class ExcessiveImportsTest extends SparqlycodeBaseTest {
 	}
 	
 	@Test
-	public void excessiveImportTest() throws Exception {
+	public void testExcessiveImport() throws Exception {
 		// conventional Java test
 		assertFalse("Class imports an excessive number of dependencies.",
 				sparqlyCodeTest("pmdExcessiveImports"));

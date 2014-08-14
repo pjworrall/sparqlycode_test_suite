@@ -22,7 +22,7 @@ public class ExcessiveParameterListTest extends SparqlycodeBaseTest {
 	}
 	
 	@Test
-	public void excessiveParameterTest() throws Exception {
+	public void testExcessiveParameters() throws Exception {
 		// conventional Java test
 		assertFalse("Class method has over 5 arguments.",
 				sparqlyCodeTest("pmdExcessiveParameterList"));

@@ -23,7 +23,7 @@ public class DoNotExtendJavaLangErrorTest extends SparqlycodeBaseTest {
 		}
 		
 		@Test
-		public void extendingErrorTest() throws Exception {
+		public void testExtendingError() throws Exception {
 			// conventional Java test
 			assertFalse("Class found that extends java.lang.Error.",
 					sparqlyCodeTest("pmdDoNotExtendJavaLangError"));

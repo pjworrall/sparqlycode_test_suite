@@ -22,7 +22,7 @@ public class ExcessivePublicFieldsTest extends SparqlycodeBaseTest {
 	}
 	
 	@Test
-	public void excessivePublicFieldsTest() throws Exception {
+	public void testExcessivePublicFields() throws Exception {
 		// conventional Java test
 		assertFalse("Class method has over 10 public fields declared.",
 				sparqlyCodeTest("pmdExcessivePublicFields"));

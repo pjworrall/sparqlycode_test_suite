@@ -22,14 +22,14 @@ public class AvoidDollarSignsTest extends SparqlycodeBaseTest{
 		}
 		
 		@Test
-		public void dollarSignInClassNameTest() throws Exception {
+		public void testDollarSignInClassName() throws Exception {
 			// conventional Java test
 			assertFalse("'$' sign in the class name",
 					sparqlyCodeTest("pmdAvoid$Signs_class"));
 		}
 		
 		@Test
-		public void dollarSignInInterfaceNameTest() throws Exception {
+		public void testDollarSignInInterfaceName() throws Exception {
 			// conventional Java test
 			assertFalse("'$' sign in the interface name",
 					sparqlyCodeTest("pmdAvoid$Signs_interface"));
