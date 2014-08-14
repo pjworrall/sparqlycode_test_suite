@@ -1,7 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
-
+import static org.junit.Assert.assertFalse;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,14 +24,14 @@ public class AvoidDollarSignsTest extends SparqlycodeBaseTest{
 		@Test
 		public void dollarSignInClassNameTest() throws Exception {
 			// conventional Java test
-			assertTrue("'$' sign in the class name",
+			assertFalse("'$' sign in the class name",
 					sparqlyCodeTest("pmdAvoid$Signs_class"));
 		}
 		
 		@Test
 		public void dollarSignInInterfaceNameTest() throws Exception {
 			// conventional Java test
-			assertTrue("'$' sign in the interface name",
+			assertFalse("'$' sign in the interface name",
 					sparqlyCodeTest("pmdAvoid$Signs_interface"));
 		}
 }

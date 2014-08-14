@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import net.interition.sparqlycode.testsuite.SparqlycodeBaseTest;
 
 import org.junit.Before;
@@ -23,7 +23,7 @@ public class AbstractClassWithoutAbstractMethodTest extends SparqlycodeBaseTest 
 		@Test
 		public void doStuffTest() throws Exception {
 			// conventional Java test
-			assertTrue("Abstract class with no abstract methods found.",
+			assertFalse("Abstract class with no abstract methods found.",
 					sparqlyCodeTest("pmdAbstractClassWithoutAbstractMethod"));
 		}
 }

@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +24,7 @@ public class DoNotUseThreadsTest extends SparqlycodeBaseTest {
 		@Test
 		public void threadsTest() throws Exception {
 			// conventional Java test
-			assertTrue("Class extends Thread and / or implements Runnable.",
+			assertFalse("Class extends Thread and / or implements Runnable.",
 					sparqlyCodeTest("pmdDoNotUseThreads"));
 		}
 }

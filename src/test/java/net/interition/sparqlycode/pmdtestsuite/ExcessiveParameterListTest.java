@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +24,7 @@ public class ExcessiveParameterListTest extends SparqlycodeBaseTest {
 	@Test
 	public void excessiveParameterTest() throws Exception {
 		// conventional Java test
-		assertTrue("Class method has over 5 arguments.",
+		assertFalse("Class method has over 5 arguments.",
 				sparqlyCodeTest("pmdExcessiveParameterList"));
 	}
 }

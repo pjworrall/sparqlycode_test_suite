@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +24,7 @@ public class ExcessivePublicFieldsTest extends SparqlycodeBaseTest {
 	@Test
 	public void excessivePublicFieldsTest() throws Exception {
 		// conventional Java test
-		assertTrue("Class method has over 10 public fields declared.",
+		assertFalse("Class method has over 10 public fields declared.",
 				sparqlyCodeTest("pmdExcessivePublicFields"));
 	}
 }

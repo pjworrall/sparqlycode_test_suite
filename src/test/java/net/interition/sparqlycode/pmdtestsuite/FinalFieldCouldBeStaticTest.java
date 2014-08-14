@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +24,7 @@ public class FinalFieldCouldBeStaticTest extends SparqlycodeBaseTest {
 	@Test
 	public void isFinalFieldStaticTest() throws Exception {
 		// conventional Java test
-		assertTrue("Final but non-static field found.",
+		assertFalse("Final but non-static field found.",
 				sparqlyCodeTest("pmdFinalFieldCouldBeStatic"));
 	}
 }

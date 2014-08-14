@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import net.interition.sparqlycode.testsuite.SparqlycodeBaseTest;
 
 import org.junit.Before;
@@ -23,7 +23,7 @@ public class AvoidPrefixingMethodParametersTest extends SparqlycodeBaseTest {
 		@Test
 		public void methodArgumentsPrefixedTest() throws Exception {
 			// conventional Java test
-			assertTrue("Prefixed method arguments found.",
+			assertFalse("Prefixed method arguments found.",
 					sparqlyCodeTest("pmdAvoidPrefixingMethodParameters"));
 		}
 }

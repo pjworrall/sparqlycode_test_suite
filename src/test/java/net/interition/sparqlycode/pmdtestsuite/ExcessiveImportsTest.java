@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +24,7 @@ public class ExcessiveImportsTest extends SparqlycodeBaseTest {
 	@Test
 	public void excessiveImportTest() throws Exception {
 		// conventional Java test
-		assertTrue("Class imports an excessive number of dependencies.",
+		assertFalse("Class imports an excessive number of dependencies.",
 				sparqlyCodeTest("pmdExcessiveImports"));
 	}
 }

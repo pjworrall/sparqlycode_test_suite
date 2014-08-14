@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class BadCloneImplementationTest extends SparqlycodeBaseTest {
 		@Test
 		public void badCloneImplementationTest() throws Exception {
 			// conventional Java test
-			assertTrue("Bad implementation of the 'clone' method was found. Extend the 'Cloneable' interface.",
+			assertFalse("Bad implementation of the 'clone' method was found. Extend the 'Cloneable' interface.",
 					sparqlyCodeTest("pmdCloneImplementorMissingCloneableInterface"));
 		}
 }

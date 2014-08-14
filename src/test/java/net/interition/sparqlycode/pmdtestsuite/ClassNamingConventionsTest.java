@@ -1,13 +1,13 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import net.interition.sparqlycode.testsuite.SparqlycodeBaseTest;
 
-public class classNamingConventionsTest extends SparqlycodeBaseTest {
+public class ClassNamingConventionsTest extends SparqlycodeBaseTest {
 	
 	/**
 	 * @author Adam Nogradi, Interition Ltd
@@ -25,7 +25,7 @@ public class classNamingConventionsTest extends SparqlycodeBaseTest {
 		@Test
 		public void classNamingTest() throws Exception {
 			// conventional Java test
-			assertTrue("Lower case class name found.",
+			assertFalse("Lower case class name found.",
 					sparqlyCodeTest("pmdClassNamingConventions"));
 		}
 }
