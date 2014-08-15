@@ -1,7 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
-
+import static org.junit.Assert.assertFalse;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,7 +24,7 @@ public class MissingSerialVersionUIDTest extends SparqlycodeBaseTest {
 	@Test
 	public void testSerialVersionUID() throws Exception {
 		// conventional Java test
-		assertTrue("Class implementing Serializable without a serialVersionUID found.",
+		assertFalse("Failed to det4ect a Class implementing Serializable without a serialVersionUID.",
 				sparqlyCodeTest("pmdMissingSerialVersionUID"));
 	}
 }

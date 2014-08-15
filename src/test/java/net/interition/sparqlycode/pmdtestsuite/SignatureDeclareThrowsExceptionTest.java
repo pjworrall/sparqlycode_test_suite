@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class SignatureDeclareThrowsExceptionTest extends SparqlycodeBaseTest {
 	@Test
 	public void testExceptionThrowing() throws Exception {
 		// conventional Java test
-		assertTrue("Method that throws 'Exception' found.",
+		assertFalse("Failed to detect Method that throws 'Exception'.",
 				sparqlyCodeTest("pmdSignatureDeclareThrowsException"));
 	}
 }

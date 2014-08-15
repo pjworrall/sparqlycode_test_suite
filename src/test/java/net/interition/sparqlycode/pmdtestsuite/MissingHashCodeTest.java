@@ -1,7 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
-
+import static org.junit.Assert.assertFalse;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,7 +24,7 @@ public class MissingHashCodeTest extends SparqlycodeBaseTest {
 	@Test
 	public void testNoHashCode() throws Exception {
 		// conventional Java test
-		assertTrue("Class implementing 'equals(Object o)' but not 'hashCode()' found.",
+		assertFalse("Failed to detect Class implementing 'equals(Object o)' but not 'hashCode()'.",
 				sparqlyCodeTest("pmdMissingHashCode"));
 	}
 }

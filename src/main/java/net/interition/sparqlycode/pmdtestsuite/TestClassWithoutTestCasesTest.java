@@ -12,9 +12,9 @@ public class TestClassWithoutTestCasesTest {
 		// A class name ending with the suffix 'Test' should be a jUnit test class.
 	}
 	// Uncomment the below method to make the test pass.
-//	@Test
-//	public void testStuff () {
-//		
-//	}
+/*	@Test
+	public void testStuff () {
+		
+	}*/
 }
 

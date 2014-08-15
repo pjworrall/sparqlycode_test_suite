@@ -1,5 +1,6 @@
 # Finds any method that throws java.lang.Exception.
 # Adam Nogradi, Interition Ltd.
+# Modified: Paul Worrall, Interition Ltd
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>

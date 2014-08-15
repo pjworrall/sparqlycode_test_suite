@@ -12,8 +12,8 @@ public class MissingEquals { // poor, missing a equals() method
 			return 1;
 		}
 	// Uncomment the below method to make the test pass.
-//	public boolean equals(Object o) {
-//	      // do some comparison
-//		return true;
-//		}
+	// public boolean equals(Object o) {
+	      // do some comparison
+		//return true;
+		//}
 }

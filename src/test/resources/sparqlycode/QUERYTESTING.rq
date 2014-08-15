@@ -1,16 +1,20 @@
 # This finds methods and their respective classes with an excessive number of arguments. Eg 5
 
 PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.example.org/>
 
-SELECT ?class ?method (count(?argument) as ?totalArguments) WHERE
- {  
-    ?method a java:Method .
-    ?method java:argument ?argument .
-    ?class java:method ?method .
+ASK WHERE {
+	SELECT (COUNT(?className) AS ?number) WHERE
+ 	{  
+   		subject:MissingEquals rdfs:label ?className .
+    	subject:MissingEquals java:method ?method .
+    	?method rdfs:label "hashCode" .
+    	FILTER NOT EXISTS {
+    	subject:MissingEquals java:method ?equals .
+    		?equals rdfs:label "equals" .
+   		}
+  
+	} HAVING (?number = 0)
 }
-group by ?class ?method
-HAVING (?totalArguments > 4)
-ORDER BY DESC (?totalArguments)
-limit 100
+

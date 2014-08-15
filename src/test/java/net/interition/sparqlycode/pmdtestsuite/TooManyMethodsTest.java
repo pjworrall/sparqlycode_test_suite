@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class TooManyMethodsTest extends SparqlycodeBaseTest {
 	@Test
 	public void testTooManyMethods() throws Exception {
 		// conventional Java test
-		assertTrue("Class found with over 10 methods.",
+		assertFalse("Failed to detect that a Class should not have over 10 methods.",
 				sparqlyCodeTest("pmdTooManyMethods"));
 	}
 }

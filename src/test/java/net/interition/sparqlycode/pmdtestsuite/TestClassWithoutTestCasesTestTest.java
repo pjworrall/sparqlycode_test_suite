@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class TestClassWithoutTestCasesTestTest extends SparqlycodeBaseTest {
 	@Test
 	public void testNoTestCases() throws Exception {
 		// conventional Java test
-		assertTrue("Class name suffixed with 'test' having no test cases found.",
+		assertFalse("Failed to detect Class name suffixed with 'Test' having no test cases.",
 				sparqlyCodeTest("pmdTestClassWithoutTestCases"));
 	}
 }
