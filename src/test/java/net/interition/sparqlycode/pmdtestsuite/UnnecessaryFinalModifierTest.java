@@ -1,6 +1,7 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,7 +25,7 @@ public class UnnecessaryFinalModifierTest extends SparqlycodeBaseTest {
 	@Test
 	public void testFinalMethodModifier() throws Exception {
 		// conventional Java test
-		assertFalse("Failed to detect that a Final method should not be found in Final Class.",
+		assertTrue("Failed to detect that a Final method should not be found in Final Class.",
 				sparqlyCodeTest("pmdUnnecessaryFinalModifier"));
 	}
 }

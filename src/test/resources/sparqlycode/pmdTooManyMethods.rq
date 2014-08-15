@@ -1,4 +1,5 @@
-# This finds classes with an excessive number of methods (Eg > 10) excluding getters, setters and is... methods. 
+# This finds classes with an excessive number of methods (Eg > 10) excluding getters, setters and is... methods.
+# Returns True when there are too many methods.
 # Paul Worrall & Adam Nogradi, Interition Ltd.
 
 PREFIX java: <http://www.interition.net/java/ref/>

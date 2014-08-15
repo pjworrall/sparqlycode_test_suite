@@ -7,10 +7,11 @@ PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqly
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 ASK WHERE {
-	SELECT (COUNT(?methodName) AS ?number) 
-		WHERE {
+
 			subject:SignatureDeclareThrowsException java:method ?method .
 			?method rdfs:label ?methodName .
-			?method java:throws <http://www.interition.net/sparqlycode/id/java/lang/Exception> .
-		} HAVING (?number = 0)
+			FILTER NOT EXISTS {
+				?method java:throws <http://www.interition.net/sparqlycode/id/java/lang/Exception> .
+			}
+
 }

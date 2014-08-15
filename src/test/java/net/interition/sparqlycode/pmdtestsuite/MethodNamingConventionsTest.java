@@ -1,6 +1,7 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,7 +25,7 @@ public class MethodNamingConventionsTest extends SparqlycodeBaseTest {
 	@Test
 	public void testMethodNames() throws Exception {
 		// conventional Java test
-		assertFalse("Failed to find Method name starting with upper-case letter or containing underscores found.",
+		assertTrue("Failed to find Method name starting with upper-case letter or containing underscores found.",
 				sparqlyCodeTest("pmdMethodNamingConventions"));
 	}
 }

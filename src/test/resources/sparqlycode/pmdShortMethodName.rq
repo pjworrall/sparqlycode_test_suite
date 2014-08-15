@@ -1,15 +1,13 @@
-# Finds methods with less than 3-character names.
+# Finds methods with less than 3-character names. Returns true if undesirable result are found.
 # Adam Nogradi, Interition Ltd.
+# Modified: Paul Worrall, ...
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 ASK WHERE {
-	SELECT (COUNT(?methodName) AS ?number)
-		WHERE {
 			subject:ShortMethodName java:method ?method .
 			?method rdfs:label ?methodName .
-			FILTER (REGEX (?methodName,  "^.{0,2}$"))
-		} HAVING (?number = 0)
+		    FILTER(REGEX (?methodName,  "^.{0,2}$"))
 }

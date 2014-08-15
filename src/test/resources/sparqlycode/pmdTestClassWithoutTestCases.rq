@@ -1,4 +1,4 @@
-# Finds all classes ending with the suffix 'Test' that aren't annotated with @Test
+# Finds all classes ending with the suffix 'Test' whose has no methods annotated with @Test
 # Adam Nogradi, Interition Ltd.
 # Modified: paul Worrall, Interition Ltd
 # Modified so test returns false. Put filters together as they always happen at the end anyway in query execution

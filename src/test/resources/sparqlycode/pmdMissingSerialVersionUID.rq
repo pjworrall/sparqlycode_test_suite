@@ -1,19 +1,18 @@
 # Checks if a class that is implementing java.io.Serializable has the field SerialVersionUID declared.
+# Returns false when a SerialVersionUID is not found.
 # Adam Nogradi, Interition Ltd.
+# Modified: Paul Worrall, ...
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 ASK WHERE {
-	SELECT (COUNT(?fieldName) AS ?number)
-		WHERE {
 			subject:MissingSerialVersionUID java:implements <http://www.interition.net/sparqlycode/id/java/io/Serializable> .
 			subject:MissingSerialVersionUID java:field ?field .
-			?field java:access "Private" .
-			?field java:isStatic true .
-			?field java:isFinal true .
-			?field rdfs:label ?fieldName .
-			FILTER (?fieldName = "serialVersionUID")
-		} HAVING (?number = 1)
+			?field java:access "Private" ; 
+			    java:isStatic true ;
+			    java:isFinal true ;
+			    rdfs:label "serialVersionUID" .
+
 }

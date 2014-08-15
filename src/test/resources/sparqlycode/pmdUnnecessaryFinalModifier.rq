@@ -1,4 +1,4 @@
-# Finds methods explicitly/unnecessarily declared final inside final classes.
+# Finds methods explicitly/unnecessarily declared final inside final classes. Returns True when undesirables found.
 # Adam Nogradi, Interition Ltd.
 # Paul Worrall, ...
 
@@ -9,7 +9,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 ASK WHERE {
 
 			subject:UnnecessaryFinalModifier java:isFinal true ; java:method ?method .
-			FILTER NOT EXISTS {
+			FILTER EXISTS {
 				  ?method java:isFinal true .
 			  }
 }

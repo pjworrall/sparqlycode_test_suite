@@ -1,4 +1,5 @@
 # This finds all classes that implement equals method but do not provide a hashCode method.
+# Returns false when hashCode method not found
 # Paul Worrall & Adam Nogradi, Interition Ltd.
 
 PREFIX java: <http://www.interition.net/java/ref/>

@@ -1,6 +1,7 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,7 +25,7 @@ public class ShortMethodNameTest extends SparqlycodeBaseTest {
 	@Test
 	public void testMethodNameLength() throws Exception {
 		// conventional Java test
-		assertFalse("Failed to detect Method name with less than 3 characters.",
+		assertTrue("Failed to detect Method name with less than 3 characters.",
 				sparqlyCodeTest("pmdShortMethodName"));
 	}
 }
