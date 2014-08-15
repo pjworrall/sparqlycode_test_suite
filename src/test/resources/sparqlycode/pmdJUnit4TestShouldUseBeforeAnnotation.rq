@@ -1,16 +1,17 @@
 # Finds any class that uses a setUp method without the @Before annotation.
+# Returns False if an @Before is not found
 # Adam Nogradi, Interition Ltd.
+# Modified: Paul Worrall, ...
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 ASK WHERE {
-	SELECT (COUNT(?methodName) AS ?number)
-		WHERE {
-			subject:JUnit4TestShouldUseBeforeAnnotation java:method ?method .
-			?method rdfs:label ?methodName .
-			FILTER (?methodName = "setUp")
-			FILTER NOT EXISTS {?method java:hasAnnotation <http://www.interition.net/sparqlycode/id/org/junit/Before>} .
-		} HAVING (?number = 0)
+	subject:JUnit4TestShouldUseBeforeAnnotation java:method ?method .
+	?method rdfs:label "setUp" .
+	FILTER EXISTS {
+	   ?method java:hasAnnotation <http://www.interition.net/sparqlycode/id/org/junit/Before>
+	} .
+
 }

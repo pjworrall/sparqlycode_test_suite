@@ -1,16 +1,16 @@
 # Finds any class that uses a tearDown method without the @After annotation.
+# Returns false if @After not found
 # Adam Nogradi, Interition Ltd.
+# Modified: Paul Worrall, ...
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 ASK WHERE {
-	SELECT (COUNT(?methodName) AS ?number)
-		WHERE {
-			subject:JUnit4TestShouldUseAfterAnnotation java:method ?method .
-			?method rdfs:label ?methodName .
-			FILTER (?methodName = "tearDown")
-			FILTER NOT EXISTS {?method java:hasAnnotation <http://www.interition.net/sparqlycode/id/org/junit/After>} .
-		} HAVING (?number = 0)
+
+	subject:JUnit4TestShouldUseAfterAnnotation java:method ?method .
+	?method rdfs:label "tearDown" .
+	FILTER EXISTS {?method java:hasAnnotation <http://www.interition.net/sparqlycode/id/org/junit/After>} .
+
 }
