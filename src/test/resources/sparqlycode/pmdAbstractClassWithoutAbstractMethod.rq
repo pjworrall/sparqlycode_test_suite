@@ -10,7 +10,7 @@ ASK WHERE {
 	SELECT (COUNT(?name) AS ?number)  WHERE {
 		subject:AbstractClassWithoutAbstractMethod java:isAbstract true .
 		subject:AbstractClassWithoutAbstractMethod rdfs:label ?name .
-			FILTER NOT EXISTS {
+			FILTER EXISTS {
 				subject:AbstractClassWithoutAbstractMethod java:method ?method .
 				?method java:isAbstract true .
 			} 

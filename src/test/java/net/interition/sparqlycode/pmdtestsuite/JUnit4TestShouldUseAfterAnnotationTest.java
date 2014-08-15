@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class JUnit4TestShouldUseAfterAnnotationTest extends SparqlycodeBaseTest 
 	@Test
 	public void testJUnitUsingAfterAnnotation() throws Exception {
 		// conventional Java test
-		assertTrue("Method 'tearDown()' found with no '@After' annotation.",
+		assertFalse("Failed to detect Method 'tearDown()' with no '@After' annotation.",
 				sparqlyCodeTest("pmdJUnit4TestShouldUseAfterAnnotation"));
 	}
 }

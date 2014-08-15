@@ -4,17 +4,9 @@ PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-ASK WHERE {
-	SELECT (COUNT(?className) AS ?number) WHERE
- 	{  
-   		subject:MissingEquals rdfs:label ?className .
-    	subject:MissingEquals java:method ?method .
-    	?method rdfs:label "hashCode" .
-    	FILTER NOT EXISTS {
-    	subject:MissingEquals java:method ?equals .
-    		?equals rdfs:label "equals" .
-   		}
-  
-	} HAVING (?number = 0)
+SELECT * WHERE {
+		subject:AbstractClassWithoutAnyMethod java:isAbstract true .
+			subject:AbstractClassWithoutAnyMethod rdfs:label ?name .
+			subject:AbstractClassWithoutAnyMethod java:method ?method .
 }
 
