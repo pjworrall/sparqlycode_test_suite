@@ -14,5 +14,5 @@ ASK WHERE {
 				subject:AbstractClassWithoutAbstractMethod java:method ?method .
 				?method java:isAbstract true .
 			} 
-	} HAVING (?number = 0)
+	} HAVING (?number > 0)
 }
