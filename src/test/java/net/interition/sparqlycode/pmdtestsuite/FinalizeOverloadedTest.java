@@ -1,6 +1,7 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,7 +25,7 @@ public class FinalizeOverloadedTest extends SparqlycodeBaseTest {
 	@Test
 	public void testFinalizeOverloaded() throws Exception {
 		// conventional Java test
-		assertFalse("Overloaded instance of the 'finalize()' method found.",
+		assertTrue("Failed to discover overloaded instance of the 'finalize()' method taking arguments.",
 				sparqlyCodeTest("pmdFinalizeOverloaded"));
 	}
 }

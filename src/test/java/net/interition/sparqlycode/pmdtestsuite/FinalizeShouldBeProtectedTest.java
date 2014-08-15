@@ -1,7 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertTrue;
-
+import static org.junit.Assert.assertFalse;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,7 +24,7 @@ public class FinalizeShouldBeProtectedTest extends SparqlycodeBaseTest {
 	@Test
 	public void testFinalizeProtected() throws Exception {
 		// conventional Java test
-		assertTrue("Non-protected instance of the 'finalize()' method found.",
+		assertFalse("Non-protected instance of the 'finalize()' method found.",
 				sparqlyCodeTest("pmdFinalizeShouldBeProtected"));
 	}
 }
