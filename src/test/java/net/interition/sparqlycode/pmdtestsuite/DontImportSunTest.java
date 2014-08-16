@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +24,7 @@ public class DontImportSunTest  extends SparqlycodeBaseTest{
 			@Test
 			public void testSunImport() throws Exception {
 				// conventional Java test
-				assertFalse("Class imports a Sun package.",
+				assertTrue("Failed to detect a Class that imports a Sun package.",
 						sparqlyCodeTest("pmdDontImportSun"));
 			}
 }

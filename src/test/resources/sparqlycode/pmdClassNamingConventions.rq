@@ -6,9 +6,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 
 ASK WHERE {
-	SELECT (COUNT(?className) AS ?number)
-		WHERE {
 			subject:classNamingConventions rdfs:label ?className
 			FILTER (REGEX (?className,  "^[a-z]"))
-		} HAVING (?number = 0) 
 }

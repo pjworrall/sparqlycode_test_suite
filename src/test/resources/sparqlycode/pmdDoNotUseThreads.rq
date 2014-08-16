@@ -7,8 +7,6 @@ PREFIX subject1: <http://www.interition.net/sparqlycode/id/net/interition/sparql
 PREFIX subject2: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/DoNotUseThreads/>
 
 ASK WHERE {
-	SELECT (COUNT(?className) AS ?number)
-		WHERE {
 			{
 				subject1:DoNotUseThreads java:extends <http://www.interition.net/sparqlycode/id/java/lang/Thread> .
 				subject1:DoNotUseThreads rdfs:label ?className .
@@ -17,5 +15,4 @@ ASK WHERE {
 				subject2:RunnableImplementation java:implements <http://www.interition.net/sparqlycode/id/java/lang/Runnable> .
 				subject2:RunnableImplementation rdfs:label ?className .
 			}
-		} HAVING (?number = 0)
 }
