@@ -6,7 +6,7 @@ package net.interition.sparqlycode.pmdtestsuite;
  *
  */
 public final class UnnecessaryFinalModifier {
-	// Remove the 'final' declaration from the below signature to make the test pass.
+	// Remove the 'final' declaration from the below signature to make the test fail.
 	public final void thisMethodDoesntHaveToBeFinal () {
 	}
 }
