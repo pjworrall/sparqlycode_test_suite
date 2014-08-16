@@ -24,7 +24,7 @@ public class MissingSerialVersionUIDTest extends SparqlycodeBaseTest {
 	@Test
 	public void testSerialVersionUID() throws Exception {
 		// conventional Java test
-		assertFalse("Failed to det4ect a Class implementing Serializable without a serialVersionUID.",
+		assertFalse("Failed to detect a Class implementing Serializable without a serialVersionUID.",
 				sparqlyCodeTest("pmdMissingSerialVersionUID"));
 	}
 }
