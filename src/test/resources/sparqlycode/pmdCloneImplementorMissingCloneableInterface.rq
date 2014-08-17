@@ -6,13 +6,9 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 
 ASK WHERE {
-	SELECT (COUNT(?method) AS ?number)
-		WHERE {  
     		subject:BadCloneImplementation java:method ?method .
     		?method rdfs:label "clone" .
       			FILTER NOT EXISTS {
       				subject:BadCloneImplementation java:implements <http://www.interition.net/sparqlycode/id/java/lang/Cloneable> .
       			}
-    		
-		} HAVING (?number = 0)
 }
