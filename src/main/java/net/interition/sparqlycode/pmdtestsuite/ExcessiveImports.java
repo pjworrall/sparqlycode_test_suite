@@ -33,9 +33,13 @@ import org.junit.internal.*;
 import org.omg.*;
 import org.xml.*;
 
-
+/**
+ * 
+ * @author Adam Nogradi, Interition Ltd.
+ *
+ */
 public class ExcessiveImports {
  // Classes should not have an excessive number of imports (over 30 in this case)
- // Remove the import statements to make the test pass.
+ // Remove the import statements to make the test fail.
 }
 

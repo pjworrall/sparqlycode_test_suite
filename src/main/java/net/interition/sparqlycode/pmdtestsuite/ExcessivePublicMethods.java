@@ -1,6 +1,10 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-
+/**
+ * 
+ * @author Paul Worrall, Interition Ltd.
+ *
+ */
 public class ExcessivePublicMethods {
 	
 	private int a ;private int b ;private int c ;
@@ -8,7 +12,7 @@ public class ExcessivePublicMethods {
 	private int g ;private int h ;private int i ;
 	private int j ;private int k ;private int l ;
 
-	// Comment out the below methods to make the test pass.
+	// Comment out the below methods to make the test fail.
 	public int getA() {
 		return a;
 	}

@@ -6,7 +6,7 @@ package net.interition.sparqlycode.pmdtestsuite;
  *
  */
 public class FinalizeOverloaded {
-	// Comment out the below method to make the test pass.
+	// Comment out the below method to make the test fail.
 	public void finalize (int a) {
 	}
 }

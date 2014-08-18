@@ -1,5 +1,10 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
+/**
+ * 
+ * @author Adam Nogradi, Interition Ltd.
+ *
+ */
 public abstract class AbstractClassWithoutAbstractMethod {
 	
 	public void doStuff () {
@@ -8,7 +13,7 @@ public abstract class AbstractClassWithoutAbstractMethod {
 		System.out.println(i);
 	}
 	
-	// Uncomment the below line to make the test pass.
-	//	public abstract void doMoreStuff (int anInt);
+	// Uncomment the below line to make the test fail.
+//		public abstract void doMoreStuff (int anInt);
 }
 

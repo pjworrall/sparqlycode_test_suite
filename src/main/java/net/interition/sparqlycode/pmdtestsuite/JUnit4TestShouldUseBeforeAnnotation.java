@@ -8,7 +8,7 @@ import org.junit.Before;
  *
  */
 public class JUnit4TestShouldUseBeforeAnnotation {
-	// Uncomment the below annotation to make the test pass.
+	// Uncomment the below annotation to make the test fail.
 //	@Before
 	public void setUp () {
 		

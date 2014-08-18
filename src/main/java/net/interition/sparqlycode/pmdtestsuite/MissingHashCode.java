@@ -11,7 +11,7 @@ public class MissingHashCode { // poor, missing a hashcode() method
 	      // do some comparison
 		return true;
 		}
-	// Uncomment the following method to make the test pass.
+	// Uncomment the following method to make the test fail.
 //	public int hashCode() {
 //	      // return some hash value
 //			return 1;

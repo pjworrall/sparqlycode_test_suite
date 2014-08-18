@@ -10,6 +10,6 @@ public abstract class Naming {
 	// start with 'Abstract...'
 	
 	// Rename the class to 'AbstractNaming' and modify the SPARQL query to look for that class
-	// to make the test pass.
+	// to make the test fail.
 }
 

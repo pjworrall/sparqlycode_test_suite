@@ -6,7 +6,7 @@ package net.interition.sparqlycode.pmdtestsuite;
  *
  */
 public class ShortMethodName {
-	// Comment out the following 2 methods to make the test pass.
+	// Comment out the following 2 methods to make the test fail.
 	public void a () {
 		
 	}

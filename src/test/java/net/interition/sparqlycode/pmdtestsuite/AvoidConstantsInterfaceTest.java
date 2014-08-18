@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,7 +24,7 @@ public class AvoidConstantsInterfaceTest extends SparqlycodeBaseTest {
 		@Test
 		public void testInterfaceWithNoMethods() throws Exception {
 			// conventional Java test
-			assertFalse("Interface with no method declarations found",
+			assertTrue("No interface containing constants only found.",
 					sparqlyCodeTest("pmdAvoidConstantsInterface"));
 		}
 }

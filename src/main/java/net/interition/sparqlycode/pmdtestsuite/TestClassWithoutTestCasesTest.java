@@ -11,7 +11,7 @@ public class TestClassWithoutTestCasesTest {
 	public static void main (String args[]) {
 		// A class name ending with the suffix 'Test' should be a jUnit test class.
 	}
-	// Uncomment the below method to make the test pass.
+	// Uncomment the below method to make the test fail.
 /*	@Test
 	public void testStuff () {
 		

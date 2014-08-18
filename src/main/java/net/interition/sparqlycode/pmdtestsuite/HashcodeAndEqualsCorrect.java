@@ -1,9 +1,12 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-//perfect, both methods provided
-
+/**
+ * 
+ * @author Adam Nogradi, Interition Ltd.
+ *
+ */
 public class HashcodeAndEqualsCorrect  {
-		
+	//perfect, both methods provided
 		public boolean equals(Object other) {
 	      // do some comparison
 			return true;
