@@ -2,7 +2,7 @@ package net.interition.sparqlycode.testsuite;
 
 public class DeprecatedMethods {
 	
-	//@Deprecated
+	@Deprecated
 	public String sayHello() {
 		return "nowt";
 	}

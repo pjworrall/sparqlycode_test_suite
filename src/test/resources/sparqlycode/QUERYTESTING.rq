@@ -4,13 +4,7 @@ PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-ASK WHERE { 
+SELECT * WHERE { 
 	
-   		subject:MissingHashCode rdfs:label ?className .
-    	subject:MissingHashCode java:method ?method .
-    	?method rdfs:label "equals" .
-    	FILTER EXISTS {
-    		subject:MissingHashCode java:method ?hashCode .
-    		?hashCode rdfs:label "hashCode" .
-   		}
-}
+   		?s java:type ?o .
+} limit 10

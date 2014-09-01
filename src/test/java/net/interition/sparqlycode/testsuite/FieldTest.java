@@ -36,5 +36,13 @@ public class FieldTest extends SparqlycodeBaseTest {
 		assertTrue("IsNativeTest encountered a problem resolving native methods in the sparqlycode RDF",
 				 sparqlyCodeTest("IsNativeMethodTest"));
 	}
+	
+	@Test
+	public void fieldTypeTest() throws Exception {
+		
+		// test the line number property exists and the uri is suffixed with the same number
+		assertTrue("FieldTypeTest encountered a problem resolving a fields type in the sparqlycode RDF",
+				 sparqlyCodeTest("FieldTypeTest"));
+	}
 
 }

@@ -6,7 +6,7 @@ public class FieldTests {
 			System.loadLibrary ("native");
     }
 	
-	// a field on line number 10 for the test
+	// this field must be on line number 10 for its test to pass
 	public static final int testField = 0;
 
 	public String sayHello() {
