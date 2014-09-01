@@ -25,8 +25,16 @@ public class FieldTest extends SparqlycodeBaseTest {
 	public void uriLineNumberForFieldTest() throws Exception {
 		
 		// test the line number property exists and the uri is suffixed with the same number
-		assertTrue("uriLineNumberForFieldTest encountered a problem with the sparqlycode RDF",
+		assertTrue("uriLineNumberForFieldTest encountered a problem resolving lines numbers in the sparqlycode RDF",
 				 sparqlyCodeTest("UriLineNumbersForFieldTest"));
+	}
+	
+	@Test
+	public void isNativeTest() throws Exception {
+		
+		// test the line number property exists and the uri is suffixed with the same number
+		assertTrue("IsNativeTest encountered a problem resolving native methods in the sparqlycode RDF",
+				 sparqlyCodeTest("IsNativeMethodTest"));
 	}
 
 }

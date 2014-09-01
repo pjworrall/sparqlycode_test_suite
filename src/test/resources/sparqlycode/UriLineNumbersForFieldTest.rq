@@ -11,6 +11,6 @@ ASK WHERE {
 
      net.interition.sparqlycode.testsuite:FieldTests java:field ?field .
      ?field java:lineNumber ?line .
-     FILTER ( ?line = 6 && STRENDS(STR(?field),"#6") ) .
+     FILTER ( ?line = 10 && STRENDS(STR(?field),"#10") ) .
 
 }
