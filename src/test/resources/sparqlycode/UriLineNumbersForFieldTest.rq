@@ -1,0 +1,16 @@
+# This tests that fields have line numbers properties and uri suffixes
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+PREFIX java.lang: <http://www.interition.net/sparqlycode/id/java/lang/>
+
+
+ASK WHERE { 
+
+     net.interition.sparqlycode.testsuite:FieldTests java:field ?field .
+     ?field java:lineNumber ?line .
+     FILTER ( ?line = 6 && STRENDS(STR(?field),"#6") ) .
+
+}

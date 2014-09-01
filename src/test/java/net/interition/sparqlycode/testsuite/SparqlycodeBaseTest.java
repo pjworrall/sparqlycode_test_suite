@@ -2,6 +2,7 @@ package net.interition.sparqlycode.testsuite;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 
 import org.apache.commons.io.IOUtils;
@@ -39,6 +40,9 @@ public class SparqlycodeBaseTest {
 		this.model = ModelFactory.createDefaultModel();
 		
 		URL kb = this.getClass().getResource("/sparqlycode.ttl");
+		
+		if(kb == null) throw new IOException("Sparqlycode KB not found. Have you produced it yet?");
+		
 		model.read(kb.toString());
 
 	}
