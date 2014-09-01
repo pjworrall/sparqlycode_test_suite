@@ -7,7 +7,7 @@ package net.interition.sparqlycode.pmdtestsuite;
  */
 public class SignatureDeclareThrowsException {
 	// Remove the 'throws Exception' from the below signature
-	// to make the test pass.
+	// to make the test fail.
 	public void exceptionThrower () throws Exception {
 		
 	}

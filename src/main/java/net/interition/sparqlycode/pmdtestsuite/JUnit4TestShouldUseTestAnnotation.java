@@ -9,7 +9,7 @@ import org.junit.Test;
  */
 public class JUnit4TestShouldUseTestAnnotation {
 	
-	// Uncomment the below annotation to make the test pass.
+	// Uncomment the below annotation to make the test fail.
 //	@Test
 	public void testDoStuff () {
 		

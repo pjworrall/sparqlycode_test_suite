@@ -7,7 +7,7 @@ import org.junit.After;
  *
  */
 public class JUnit4TestShouldUseAfterAnnotation {
-	// Uncomment the below annotation to make the test pass.
+	// Uncomment the below annotation to make the test fail.
 //	@After
 	public void tearDown () {
 		

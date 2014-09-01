@@ -2,14 +2,10 @@
 # Adam Nogradi, Interition Ltd.
 
 PREFIX java: <http://www.interition.net/java/ref/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 
 ASK WHERE{
-	SELECT (COUNT(?field) AS ?number)
-		WHERE {
 			subject:AvoidProtectedFieldInFinalClass java:isFinal true .
 			subject:AvoidProtectedFieldInFinalClass java:field ?field .
 			?field java:access "Protected" .
-		} HAVING (?number = 0)
 } 

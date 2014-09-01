@@ -1,7 +1,12 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-// Remove the 'in' and 'out' prefixes from the method argument names to make the test pass.
+/**
+ * 
+ * @author Adam Nogradi, Interition Ltd.
+ *
+ */
 public class AvoidPrefixingMethodParameters {
+	// Remove the 'in' and 'out' prefixes from the method argument names to make the test fail.
 	public void aMethod (int inParameter, int inParameter2, String outParameter) {
 		
 	}

@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class AvoidSynchronizedAtMethodLevelTest extends SparqlycodeBaseTest {
 		@Test
 		public void testSynchronizedMethod() throws Exception {
 			// conventional Java test
-			assertFalse("Synchronized method found. Use 'synchronized' on a block level.",
+			assertTrue("Could not detect a Class with a synchronized method.",
 					sparqlyCodeTest("pmdAvoidSynchronizedAtMethodLevel"));
 		}
 }

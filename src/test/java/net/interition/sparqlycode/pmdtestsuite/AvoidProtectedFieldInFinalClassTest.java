@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class AvoidProtectedFieldInFinalClassTest extends SparqlycodeBaseTest {
 		@Test
 		public void testProtectedField() throws Exception {
 			// conventional Java test
-			assertFalse("Protected field found in a final class.",
+			assertTrue("Could not detect a protected field in a final class.",
 					sparqlyCodeTest("pmdAvoidProtectedFieldInFinalClass"));
 		}
 }

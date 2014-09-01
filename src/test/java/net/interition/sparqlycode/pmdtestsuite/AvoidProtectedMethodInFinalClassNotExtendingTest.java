@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +26,7 @@ public class AvoidProtectedMethodInFinalClassNotExtendingTest extends
 		@Test
 		public void testProtectedMethod() throws Exception {
 			// conventional Java test
-			assertFalse("Protected method found in a final class that doesn't extend any other classes.",
+			assertTrue("Could not detect a protected method in a final class that doesn't extend any other classes.",
 					sparqlyCodeTest("pmdAvoidProtectedMethodInFinalClassNotExtending"));
 		}
 }

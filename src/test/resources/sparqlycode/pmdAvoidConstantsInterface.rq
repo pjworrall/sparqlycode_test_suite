@@ -2,19 +2,13 @@
 # Adam Nogradi, Interition Ltd.
 
 PREFIX java: <http://www.interition.net/java/ref/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 
 ASK WHERE {
-	SELECT (COUNT (?name) AS ?number)
-		WHERE {
 			subject:AvoidConstantsInterface a java:Interface .
 			subject:AvoidConstantsInterface java:field ?field .
-			subject:AvoidConstantsInterface rdfs:label ?name .
 			?field java:isStatic true .
 			?field java:isFinal true .
 			?field java:access "Public" .
 			FILTER NOT EXISTS {subject:AvoidConstantsInterface java:method ?method} .
-		} 
-		HAVING (?number = 0)
 }

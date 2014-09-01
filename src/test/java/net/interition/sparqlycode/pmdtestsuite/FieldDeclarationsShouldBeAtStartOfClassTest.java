@@ -1,18 +1,19 @@
 package net.interition.sparqlycode.pmdtestsuite;
-
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import net.interition.sparqlycode.testsuite.SparqlycodeBaseTest;
+
 /**
  * 
  * @author Adam Nogradi, Interition Ltd.
  *
  */
-public class FinalFieldCouldBeStaticTest extends SparqlycodeBaseTest {
-	
+
+public class FieldDeclarationsShouldBeAtStartOfClassTest extends
+		SparqlycodeBaseTest {
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -22,9 +23,9 @@ public class FinalFieldCouldBeStaticTest extends SparqlycodeBaseTest {
 	}
 	
 	@Test
-	public void testIsFinalFieldStatic() throws Exception {
+	public void testFieldDeclaration() throws Exception {
 		// conventional Java test
-		assertFalse("Final but non-static field found.",
-				sparqlyCodeTest("pmdFinalFieldCouldBeStatic"));
+		assertTrue("No fields declared mid-class have been found.",
+				sparqlyCodeTest("pmdFieldDeclarationsShouldBeAtStartOfClass"));
 	}
 }

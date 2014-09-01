@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class DoNotExtendJavaLangErrorTest extends SparqlycodeBaseTest {
 		@Test
 		public void testExtendingError() throws Exception {
 			// conventional Java test
-			assertFalse("Class found that extends java.lang.Error.",
+			assertTrue("Cannot detect a Class that extends java.lang.Error.",
 					sparqlyCodeTest("pmdDoNotExtendJavaLangError"));
 		}
 }

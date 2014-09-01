@@ -14,7 +14,7 @@ public class TooManyMethods {
 	private int j ;private int k ;private int l ;
 	private boolean boo; private boolean too;
 
-	// Comment out the following methods to make the test pass.
+	// Comment out the following methods to make the test fail.
 	public int gA() {
 		return a;
 	}

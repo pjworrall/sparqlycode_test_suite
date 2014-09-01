@@ -1,5 +1,5 @@
 # This finds all classes with a bad clone implementation - should use super.clone()
-# this is nto working yet
+# this is not working yet
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -11,4 +11,4 @@ SELECT ?classes ?method ?return WHERE
     ?method rdfs:label "clone" .
     optional { ?method java:returns ?return .}
     
-} LIMIT 100
+}

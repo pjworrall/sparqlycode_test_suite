@@ -1,6 +1,6 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class ClassNamingConventionsTest extends SparqlycodeBaseTest {
 		@Test
 		public void testClassNaming() throws Exception {
 			// conventional Java test
-			assertFalse("Lower case class name found.",
+			assertTrue("Cannot detect Class starting with a lower-case letter",
 					sparqlyCodeTest("pmdClassNamingConventions"));
 		}
 }

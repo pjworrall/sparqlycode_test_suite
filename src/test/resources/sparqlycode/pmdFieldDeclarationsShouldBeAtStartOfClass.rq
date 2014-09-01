@@ -1,0 +1,26 @@
+# This finds fields declared somewhere other than the top of the class.
+# Adam Nogradi, Interition Ltd.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+
+ASK WHERE {
+			{
+    			subject:FieldDeclarationsShouldBeAtStartOfClass java:field ?field .
+    			?field java:lineNumber ?fieldLN .
+    			subject:FieldDeclarationsShouldBeAtStartOfClass java:method ?method .
+    			?method java:lineNumber ?methodLN .
+    			FILTER(?fieldLN > ?methodLN)
+    		} 
+    		UNION {
+    			?childClass java:innerClassOf subject:FieldDeclarationsShouldBeAtStartOfClass .
+    			?childClass java:lineNumber ?innerClassLN .
+    				
+    			?childClass java:field ?field .
+    			?field java:lineNumber ?childFieldLN .
+    			?childClass java:method ?childMethod .
+    			?childMethod java:lineNumber ?childMethodLN .
+    			FILTER(?fieldLN > ?innerClassLN || ?childFieldLN > ?childMethodLN) 
+    		}
+    			
+}

@@ -6,7 +6,7 @@ package net.interition.sparqlycode.pmdtestsuite;
  *
  */
 public class MethodNamingConventions {
-	// Comment out the following 3 methods to make the test pass.
+	// Comment out the following 3 methods to make the test fail.
 	public void UpperCaseMethod () {
 		
 	}
