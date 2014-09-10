@@ -1,4 +1,4 @@
-# Finds methods with over 30 import statements.
+# Finds methods with over 20 import statements.
 # Adam Nogradi, Interition Ltd.
 
 PREFIX java: <http://www.interition.net/java/ref/>
@@ -9,5 +9,5 @@ ASK WHERE {
 		WHERE {
 			subject:ExcessiveImports java:imports ?imports .
 		}
-		HAVING (?totalImports < 30)
+		HAVING (?totalImports < 20)
 }

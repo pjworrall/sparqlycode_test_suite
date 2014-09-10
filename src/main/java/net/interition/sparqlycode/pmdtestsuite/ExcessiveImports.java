@@ -20,18 +20,6 @@ import java.nio.*;
 import java.rmi.*;
 import java.security.*;
 import java.sql.*;
-import org.apache.commons.lang.*;
-import org.apache.html.*;
-import org.apache.http.*;
-import org.apache.jena.*;
-import org.apache.log4j.*;
-import org.apache.wml.*;
-import org.apache.xerces.*;
-import org.apache.xml.*;
-import org.junit.rules.*;
-import org.junit.internal.*;
-import org.omg.*;
-import org.xml.*;
 
 /**
  * 
