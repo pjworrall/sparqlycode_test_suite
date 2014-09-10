@@ -1,4 +1,4 @@
-# test that the java:name property is no longer created by the sc engine
+# This tests that...
 
 PREFIX rdf: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX java: <http://www.interition.net/java/ref/>
@@ -8,7 +8,7 @@ PREFIX java.lang: <http://www.interition.net/sparqlycode/id/java/lang/>
 
 ASK WHERE { 
 
-     ?class a java:Class .
-     ?class java:name ?name .
+     net.interition.sparqlycode.testsuite:AClassWithBoolean java:field ?field .
+     # test for something marked as boolean
 
 }
