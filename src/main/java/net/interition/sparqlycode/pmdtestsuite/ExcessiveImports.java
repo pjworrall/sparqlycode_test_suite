@@ -20,7 +20,7 @@ import java.nio.*;
 import java.rmi.*;
 import java.security.*;
 import java.sql.*;
-import org.apache.commons.*;
+import org.apache.commons.lang.*;
 import org.apache.html.*;
 import org.apache.http.*;
 import org.apache.jena.*;

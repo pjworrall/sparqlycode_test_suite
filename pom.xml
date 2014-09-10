@@ -34,6 +34,13 @@
 			<version>2.11.2</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- THE FOLLOWING DEPENDENCIES ARE NEEDED FOR THE ExcessiveImports test -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<pluginManagement>
@@ -56,14 +63,17 @@
 							http://www.interition.net/sparqlycode/id/</additionalparam>
 						<subpackages>${subpackage}</subpackages>
 						<reportOutputDirectory>${basedir}/src/test</reportOutputDirectory>
-					    <destDir>resources</destDir>
+						<destDir>resources</destDir>
 					</configuration>
-					<!-- thought I better mention that the execution declaration is NOT working. Here to remind me to fix it. -->
+					<!-- thought I better mention that the execution declaration is NOT 
+						working. Here to remind me to fix it. -->
 					<executions>
 						<execution>
 							<id>in-build</id>
-							<phase>generate-test-sources</phase>
-							<goals><goal>javadoc</goal></goals>
+							<phase>test</phase>
+							<goals>
+								<goal>javadoc</goal>
+							</goals>
 						</execution>
 					</executions>
 				</plugin>
