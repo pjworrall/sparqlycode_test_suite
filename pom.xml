@@ -20,7 +20,7 @@
 			<version>4.11</version>
 			<!-- we have unit test cases in the main code that we are testing so need 
 				this dependency in compile scope -->
-			<!-- <scope>test</scope> -->
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -70,8 +70,26 @@
 						</execution>
 					</executions>
 				</plugin>
+				
+				<!-- This plugin is to run a Riot check before doing anything else -->
+				<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.3.2</version>
+								<configuration>
+								    <includePluginDependencies>true</includePluginDependencies>
+									<mainClass>net.interition.sparqlycode.testsuite.ValidityChecker</mainClass>
+								</configuration>
+						<dependencies>
+							<dependency>
+								<groupId>org.apache.jena</groupId>
+								<artifactId>apache-jena-libs</artifactId>
+								<type>pom</type>
+								<version>2.12.0</version>
+							</dependency>
+						</dependencies>
+					</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
-
 </project>
