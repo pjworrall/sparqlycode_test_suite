@@ -32,7 +32,7 @@
 			<artifactId>apache-jena-libs</artifactId>
 			<type>pom</type>
 			<version>2.11.2</version>
-			<scope>test</scope>
+<!-- 			<scope>test</scope> -->
 		</dependency>
 	</dependencies>
 	<build>
