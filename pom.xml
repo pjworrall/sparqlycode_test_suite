@@ -20,7 +20,7 @@
 			<version>4.11</version>
 			<!-- we have unit test cases in the main code that we are testing so need 
 				this dependency in compile scope -->
-			<scope>test</scope>
+<!-- 			<scope>test</scope> -->
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
