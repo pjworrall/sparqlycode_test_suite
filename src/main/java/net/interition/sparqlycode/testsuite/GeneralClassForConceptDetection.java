@@ -5,6 +5,11 @@ public class GeneralClassForConceptDetection {
 	private boolean sheDoes = true;
 	private boolean sheDoesNot = false;
 	
+	GeneralClassForConceptDetection() {
+		this.sheDoes = true;
+		this.sheDoesNot = false;
+	}
+	
 	public boolean isSheDoesNot() {
 		return sheDoesNot;
 	}

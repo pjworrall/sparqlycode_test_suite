@@ -1,0 +1,14 @@
+# This checks that a method has a type of Method
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK WHERE { 
+	
+   		?class rdfs:label "GeneralClassForConceptDetection" ;
+   				a java:Class ;
+   				java:method ?method .
+   		?method a java:Method .
+   		
+}
