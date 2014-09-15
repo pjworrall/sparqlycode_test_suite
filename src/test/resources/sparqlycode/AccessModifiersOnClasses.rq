@@ -1,4 +1,4 @@
-# This tests that...
+# This tests that access modifier properties are appearing on a Class
 
 PREFIX rdf: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX java: <http://www.interition.net/java/ref/>
@@ -8,7 +8,6 @@ PREFIX java.lang: <http://www.interition.net/sparqlycode/id/java/lang/>
 
 ASK WHERE { 
 
-     net.interition.sparqlycode.testsuite:AClassWithBoolean java:field ?field .
-     # test for something marked as boolean
+     net.interition.sparqlycode.testsuite:AccessModifiersOnClass java:access ?access .
 
 }
