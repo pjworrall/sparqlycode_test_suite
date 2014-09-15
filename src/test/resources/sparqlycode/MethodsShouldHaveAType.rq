@@ -1,0 +1,14 @@
+# This tests that methods have an rdf:type
+
+PREFIX rdf: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+PREFIX java.lang: <http://www.interition.net/sparqlycode/id/java/lang/>
+
+
+ASK WHERE { 
+
+     net.interition.sparqlycode.testsuite:GeneralClassForConceptDetection java:method ?method .
+     ?method a java:Method .
+
+}
