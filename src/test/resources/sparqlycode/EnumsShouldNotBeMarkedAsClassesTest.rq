@@ -1,0 +1,13 @@
+# This tests checks an Enum type is not also marked as a Class
+
+PREFIX rdf: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+PREFIX java.lang: <http://www.interition.net/sparqlycode/id/java/lang/>
+
+
+ASK WHERE { 
+
+     net.interition.sparqlycode.testsuite:GeneralEnumForConceptProving a ?type . 
+     filter ( ?type != java:Enum )
+}
