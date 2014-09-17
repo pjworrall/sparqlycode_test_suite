@@ -92,6 +92,11 @@ public class GenericMethodExercise {
 		map.put("Poo", new Double(10.99));
 		return map;
 	}
+	
+	public Map<String, String> myMethod(Map<String, Integer> map)  {
+		 Map<String, String> myMap= new HashMap<String, String> ();
+		 return myMap;
+	}
 
 	// two types
 	// public static <A,B> void addAll(List<A> list, B... arr) {

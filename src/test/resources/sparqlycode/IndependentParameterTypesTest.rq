@@ -1,0 +1,17 @@
+# This tests if each parameter in a Generic declaration is identifiable individually
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+PREFIX java.lang: <http://www.interition.net/sparqlycode/id/java/lang/>
+
+
+ASK WHERE { 
+     SELECT (COUNT(?argument) AS ?number) {
+	     net.interition.sparqlycode.testsuite:GenericMethodExercise java:method  ?method . 
+	     ?method rdfs:label "myMethod" ;
+	             java:returns ?return .
+	     ?return java:typeParameter ?typeParameter .
+	     ?typeParameter java:argument ?argument .
+     } HAVING ( ?number = 2 )
+}

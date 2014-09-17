@@ -52,5 +52,13 @@ public class FieldTest extends SparqlycodeBaseTest {
 		assertTrue("GenericFieldTest did not find expected properties for a generic field in the sparqlycode RDF",
 				 sparqlyCodeTest("GenericFieldTest"));
 	}
+	
+	@Test
+	public void independentParameterTypesTest() throws Exception {
+		
+		// test that fields with generic types and parameters have appropriate properties
+		assertTrue("IndependentParameterTypesTest did not find expected properties for a generic field in the sparqlycode RDF",
+				 sparqlyCodeTest("IndependentParameterTypesTest"));
+	}
 
 }
