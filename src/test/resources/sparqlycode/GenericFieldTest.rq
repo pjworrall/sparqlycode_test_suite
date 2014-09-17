@@ -1,0 +1,15 @@
+# This tests that generic fields have their generic type attributes etc.
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX jdk: <http://www.interition.net/sparqlycode/id/>
+PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+PREFIX java.lang: <http://www.interition.net/sparqlycode/id/java/lang/>
+
+ASK WHERE { 
+
+     net.interition.sparqlycode.testsuite:GenericMethodExercise java:field ?field .
+     ?field java:type ?type ;
+            java:typeParameter ?typeParameter  .
+     ?typeParameter java:argument ?argument .
+
+}

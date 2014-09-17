@@ -19,6 +19,8 @@ import java.util.List;
 import java.util.Map;
 
 public class GenericMethodExercise {
+	
+	List<Number> genericField= null;
 
 	// bring old fashioned raw type
 	public static String toList(String what){
