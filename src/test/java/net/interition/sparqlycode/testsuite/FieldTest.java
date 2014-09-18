@@ -60,5 +60,13 @@ public class FieldTest extends SparqlycodeBaseTest {
 		assertTrue("IndependentParameterTypesTest did not find expected properties for a generic field in the sparqlycode RDF",
 				 sparqlyCodeTest("IndependentParameterTypesTest"));
 	}
+	
+	@Test
+	public void fieldIsArrayTest() throws Exception {
+		
+		// test that fields that are arrays have java:dimension properties
+		assertTrue("FieldIsArrayTest did not find expected properties for an Array in the sparqlycode RDF",
+				 sparqlyCodeTest("FieldIsArrayTest"));
+	}
 
 }

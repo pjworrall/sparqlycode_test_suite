@@ -7,11 +7,9 @@ package net.interition.sparqlycode.testsuite;
 
 /*
  * 
- * This Class is for a very basic test of how an ordinary method is represented in sparqlycode
+ * This Class is for testing concepts around methods
  * 
  */
-
-
 
 public class MethodArgumentExercise {
 	
@@ -26,5 +24,10 @@ public class MethodArgumentExercise {
 		this.others = others;
 		
 		return "Whiteroom";
+	}
+	
+	public String[] getNames(String surnames[]) {
+		String[] names = {"tom","dick","harry"};
+		return names;
 	}
 }

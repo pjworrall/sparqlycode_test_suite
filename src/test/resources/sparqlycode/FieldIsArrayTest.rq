@@ -1,0 +1,16 @@
+# This test check that arrays are marked as such with the isArray predicate 
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK WHERE { 
+	
+   		net.interition.sparqlycode.testsuite:FieldTests java:field ?field .
+   		?field rdfs:label "names" ;
+   		       java:dimension ?dimension .
+   		filter ( ?dimension = 2 ) 
+   		
+}
+
+

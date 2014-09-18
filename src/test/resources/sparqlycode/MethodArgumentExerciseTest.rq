@@ -10,6 +10,7 @@ ASK WHERE {
      SELECT (COUNT(?method) AS ?number)  
           WHERE  {  
           	subject:MethodArgumentExercise java:method ?method .
+          	?method rdfs:label "doSomethingImportant" .
             ?method java:argument ?argument .
             # second type is actually a string array and we missing the modelling if that!!!
             ?argument java:type <http://www.interition.net/sparqlycode/id/java/lang/String> .
