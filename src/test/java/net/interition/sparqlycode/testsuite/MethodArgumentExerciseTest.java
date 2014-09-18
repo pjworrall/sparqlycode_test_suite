@@ -33,5 +33,21 @@ public class MethodArgumentExerciseTest extends SparqlycodeBaseTest {
 		assertTrue("MethodArgumentExerciseTest encountered a problem with the sparqlycode RDF",
 				 sparqlyCodeTest("MethodArgumentExerciseTest"));
 	}
+	
+	@Test
+	public void getNamesArrayReturnTypeTest() throws Exception {
+		
+		// Sparqlycode test
+		assertTrue("ArrayReturnTypesTest encountered a problem with the sparqlycode RDF",
+				 sparqlyCodeTest("ArrayReturnTypesTest"));
+	}
+	
+	@Test
+	public void getNamesArrayArgumentTest() throws Exception {
+		
+		// Sparqlycode test
+		assertTrue("ArrayArgumentTest encountered a problem with the sparqlycode RDF",
+				 sparqlyCodeTest("ArrayArgumentTest"));
+	}
 
 }

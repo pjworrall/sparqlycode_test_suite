@@ -1,0 +1,21 @@
+# This test that return types that are arrays have dimension properties
+
+# expecting:
+#  doSomething() to have an argument of String[]
+#  getNames() to has an argument of String[] and a return type of String[]
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK WHERE { 
+	
+   		net.interition.sparqlycode.testsuite:MethodArgumentExercise java:method ?method .
+   		?method rdfs:label "getNames" ;
+   		       java:returns ?return .
+   		?return java:dimension ?dimension .
+		filter ( ?dimension = 1 ) 
+   		
+}
+
+
