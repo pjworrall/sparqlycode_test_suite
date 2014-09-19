@@ -55,8 +55,8 @@
 						<additionalparam>-baseuri
 							http://www.interition.net/sparqlycode/id/</additionalparam>
 						<subpackages>${subpackage}</subpackages>
-						<reportOutputDirectory>${basedir}/target</reportOutputDirectory>
-						<destDir>sparqlycode</destDir>
+						<reportOutputDirectory>${basedir}</reportOutputDirectory>
+						<destDir>/target/site/apidocs</destDir>
 					</configuration>
 					<!-- thought I better mention that the execution declaration is NOT 
 						working. Here to remind me to fix it. -->
@@ -77,7 +77,7 @@
 					<version>2.17</version>
 					<configuration>
 						<additionalClasspathElements>
-							<additionalClasspathElement>${basedir}/target/sparqlycode</additionalClasspathElement>
+							<additionalClasspathElement>${basedir}/target/site/apidocs</additionalClasspathElement>
 						</additionalClasspathElements>
 					</configuration>
 				</plugin>
