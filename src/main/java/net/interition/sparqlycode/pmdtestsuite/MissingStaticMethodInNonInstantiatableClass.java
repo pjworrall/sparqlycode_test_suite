@@ -1,5 +1,11 @@
 package net.interition.sparqlycode.pmdtestsuite;
 
+/**
+ * 
+ * @author Paul Worrall, Interition Ltd.
+ *
+ */
+
 public class MissingStaticMethodInNonInstantiatableClass {	
 
 	// This class is unusable, since it cannot be
@@ -9,7 +15,7 @@ public class MissingStaticMethodInNonInstantiatableClass {
 	  private MissingStaticMethodInNonInstantiatableClass(int x) {
 		  
 	  }
-	  
+	  // Make the below method static to make the test fail
 	  void missingStaticMethodInNonInstantiatableClass() {}
 	
 }

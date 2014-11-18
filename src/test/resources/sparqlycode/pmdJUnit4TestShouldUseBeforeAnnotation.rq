@@ -1,7 +1,7 @@
 # Finds any class that uses a setUp method without the @Before annotation.
 # Returns False if an @Before is not found
 # Adam Nogradi, Interition Ltd.
-# Modified: Paul Worrall, ...
+# Modified: Paul Worrall
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>

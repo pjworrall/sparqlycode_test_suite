@@ -1,5 +1,6 @@
 # GenericMethodExercise must have one String parameter represented in the Sparqlycode
 # This test needs to do something more specific for testing generics
+# Paul Worrall, Interition Ltd.
 
 PREFIX sc:   <http://www.interition.net/sparqlycode/id/>
 PREFIX java: <http://www.interition.net/java/ref/>

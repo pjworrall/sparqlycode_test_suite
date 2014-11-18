@@ -1,7 +1,7 @@
 # Checks if a class that is implementing java.io.Serializable has the field SerialVersionUID declared.
 # Returns false when a SerialVersionUID is not found.
 # Adam Nogradi, Interition Ltd.
-# Modified: Paul Worrall, ...
+# Modified: Paul Worrall
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>

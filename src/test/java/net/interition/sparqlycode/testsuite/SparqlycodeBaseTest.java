@@ -19,7 +19,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 
 /**
  * 
- * @author Paul Worrall
+ * @author Paul Worrall, Interition Ltd.
  * 
  */
 public class SparqlycodeBaseTest {

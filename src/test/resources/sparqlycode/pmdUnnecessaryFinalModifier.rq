@@ -1,6 +1,5 @@
 # Finds methods explicitly/unnecessarily declared final inside final classes. Returns True when undesirables found.
-# Adam Nogradi, Interition Ltd.
-# Paul Worrall, ...
+# Adam Nogradi & Paul Worrall, Interition Ltd.
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>

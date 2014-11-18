@@ -1,4 +1,5 @@
 # This test that return types that are arrays have dimension properties
+# Paul Worrall, Interition Ltd.
 
 # expecting:
 #  doSomething() to have an argument of String[]

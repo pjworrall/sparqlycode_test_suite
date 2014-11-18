@@ -56,7 +56,7 @@
 							http://www.interition.net/sparqlycode/id/</additionalparam>
 						<subpackages>${subpackage}</subpackages>
 						<reportOutputDirectory>${basedir}</reportOutputDirectory>
-						<destDir>/target/site/apidocs</destDir>
+						<destDir>/src/test/resources</destDir>
 					</configuration>
 					<!-- thought I better mention that the execution declaration is NOT 
 						working. Here to remind me to fix it. -->

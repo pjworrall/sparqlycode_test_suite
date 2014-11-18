@@ -1,6 +1,10 @@
 package net.interition.sparqlycode.testsuite;
 
-// reproducing http://www.interition.net:3030/browse/COD-230
+/**
+ * 
+ * @author Paul Worrall, Interition Ltd.
+ *
+ */
 
 public class OverloadedMethodsBugReproducer {
 	

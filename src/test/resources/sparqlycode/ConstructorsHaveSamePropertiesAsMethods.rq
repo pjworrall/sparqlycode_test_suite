@@ -1,4 +1,5 @@
 # This checks that constructors have same properties, where appropriate, as methods
+# Paul Worrall, Interition Ltd.
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>

@@ -1,7 +1,7 @@
 # This finds classes with final field declarations that aren't static
 # Returns True if offending fields are found
 # Adam Nogradi, Interition Ltd.
-# Modified: Paul Worrall, ...
+# Modified: Paul Worrall
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>

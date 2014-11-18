@@ -1,4 +1,5 @@
 # This tests if each parameter in a Generic declaration is identifiable individually
+# Paul Worrall, Interition Ltd.
 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX java: <http://www.interition.net/java/ref/>

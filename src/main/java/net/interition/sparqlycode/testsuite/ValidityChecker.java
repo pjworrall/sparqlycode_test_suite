@@ -1,5 +1,9 @@
 package net.interition.sparqlycode.testsuite;
 
+/**
+ * @author Adam Nogradi, Interition Ltd.
+ */
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import com.hp.hpl.jena.rdf.model.Model;

@@ -1,4 +1,5 @@
 # This tests that methods marked as Deprecated are discoverable
+# Paul Worrall, Interition Ltd.
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX jdk: <http://www.interition.net/sparqlycode/id/>

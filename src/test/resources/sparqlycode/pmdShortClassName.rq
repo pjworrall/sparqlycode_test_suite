@@ -8,7 +8,6 @@ PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqly
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 ASK WHERE {
-
 			subject:SCN rdfs:label ?className .
 			FILTER  (REGEX (?className,  "^.{0,4}$"))
 

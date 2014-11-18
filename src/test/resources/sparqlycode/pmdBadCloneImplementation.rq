@@ -1,5 +1,6 @@
 # This finds all classes with a bad clone implementation - should use super.clone()
 # this is not working yet
+# Adam Nogradi, Interition Ltd.
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

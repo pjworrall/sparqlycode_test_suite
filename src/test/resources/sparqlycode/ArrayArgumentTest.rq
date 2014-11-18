@@ -1,4 +1,5 @@
 # This tests that arguments to a method that are arrays have dimension properties
+# Paul Worrall, Interition Ltd.
 
 # expecting:
 #  getNames() has an argument of String[]

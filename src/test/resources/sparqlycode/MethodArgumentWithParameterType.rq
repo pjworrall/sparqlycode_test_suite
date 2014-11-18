@@ -1,4 +1,5 @@
 # MethodArgumentWithParameterType checks that a method has an argument with a particular parameter type declaration
+# Paul Worrall, Interition Ltd.
 
 PREFIX sc:   <http://www.interition.net/sparqlycode/id/>
 PREFIX java: <http://www.interition.net/java/ref/>

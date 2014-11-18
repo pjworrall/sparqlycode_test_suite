@@ -1,4 +1,5 @@
 # GenericMethodExercise must declare the generic types in the toList method signature
+# Paul Worrall, Interition Ltd.
 
 PREFIX sc:   <http://www.interition.net/sparqlycode/id/>
 PREFIX java: <http://www.interition.net/java/ref/>

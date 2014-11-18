@@ -1,10 +1,11 @@
+# This .rq file is solely to test queries, it has no specific role.
 # This finds methods and their respective classes with an excessive number of arguments. Eg 5
 
 PREFIX java: <http://www.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT * WHERE { 
-	
-   		?s java:type ?o .
-} limit 10
+SELECT distinct ?p WHERE {
+?class a java:Class .
+?class ?p ?o
+}
