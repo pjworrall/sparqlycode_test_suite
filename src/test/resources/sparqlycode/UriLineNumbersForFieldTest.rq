@@ -28,6 +28,6 @@ PREFIX java.lang: <http://www.interition.net/sparqlycode/id/java/lang/>
 ASK WHERE { 
      net.interition.sparqlycode.testsuite:FieldTests java:field ?field .
      ?field java:lineNumber ?line .
-     FILTER ( ?line = 10 && STRENDS(STR(?field),"#10") ) .
+     FILTER ( ?line = 28 && STRENDS(STR(?field),"#28") ) .
 
 }

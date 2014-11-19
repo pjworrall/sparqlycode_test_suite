@@ -24,7 +24,7 @@
  *
  */
 public class FieldTests {
-	// this field must be on line number 10 for its test to pass
+	// this field must be on line number 28 for its test to pass
 	public static final int testField = 0;
 	
 	static {
