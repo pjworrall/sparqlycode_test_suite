@@ -1,0 +1,22 @@
+# This test that generic argument to a method that is an array has a dimension property
+
+# expecting:
+#  toList(T[] arr) where T has a dimension of 1
+
+PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX sci: <http://www.interition.net/sparqlycode/id/>
+PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK WHERE { 
+	
+   		net.interition.sparqlycode.testsuite:GenericMethodExercise java:method ?method .
+   		?method rdfs:label "toList" ;
+   		       java:argument ?argument .
+   		?argument java:type sci:T .
+   		
+   		?argument java:dimension ?dimension .
+   		
+   		filter ( ?dimension = 1)
+   		
+}
