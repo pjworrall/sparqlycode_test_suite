@@ -1,10 +1,14 @@
-# This finds methods and their respective classes with an excessive number of arguments. Eg 5
+# This counted the number of methods in a class
+
 
 PREFIX java: <http://www.interition.net/java/ref/>
-PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+PREFIX sci: <http://www.interition.net/sparqlycode/id/>
+PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT * WHERE { 
+SELECT *
+	WHERE {
+	  net.interition.sparqlycode.testsuite:ForeignCodeUserClass ?p ?o .
+	}
 	
-   		?s java:type ?o .
-} limit 10
+	
