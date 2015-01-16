@@ -101,6 +101,14 @@
 						</dependency>
 					</dependencies>
 				</plugin>
+				
+				<!-- This plugin is for the SC SCCS KB publisher -->
+				<plugin>
+					<groupId>net.interition</groupId>
+					<artifactId>screpo-maven-plugin</artifactId>
+					<version>0.0.3-SNAPSHOT</version>
+				</plugin>
+				
 			</plugins>
 		</pluginManagement>
 	</build>
