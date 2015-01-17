@@ -107,8 +107,14 @@
 					<groupId>net.interition</groupId>
 					<artifactId>screpo-maven-plugin</artifactId>
 					<version>0.0.3-SNAPSHOT</version>
+					<configuration>
+    					<message>Testsuite SCCS KB Generation</message>
+    					<outputfile>sccs.ttl</outputfile>
+    					<startTag>refs/tags/0.0.1d</startTag>
+    					<endTag>refs/tags/0.0.1b</endTag>
+    					<identifier>tbd</identifier>
+  					</configuration>
 				</plugin>
-				
 			</plugins>
 		</pluginManagement>
 	</build>
