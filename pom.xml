@@ -109,10 +109,10 @@
 					<version>0.0.3-SNAPSHOT</version>
 					<configuration>
     					<message>Testsuite SCCS KB Generation</message>
-    					<outputfile>sccs.ttl</outputfile>
+    					<outputfile>${project.build.testOutputDirectory}/sccs.ttl</outputfile>
     					<startTag>refs/tags/0.0.1d</startTag>
     					<endTag>refs/tags/0.0.1b</endTag>
-    					<identifier>tbd</identifier>
+    					<identifier>id</identifier>
   					</configuration>
 				</plugin>
 			</plugins>
