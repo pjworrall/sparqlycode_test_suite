@@ -26,8 +26,8 @@ for Provenance.  For those not familiar with W3C PROVO an additional model is al
 
 #### Documentation
 
-* [Sparqlycode KB installation guide] (http://www.interition.net)
-* [SCCS KB installation guide]
+* [Sparqlycode KB installation guide](http://confluence.interition.net/todo)
+* [SCCS KB installation guide](http://confluence.interition.net/todo)
 
 #### Getting started
 
@@ -74,7 +74,7 @@ If those darn tests are stopping you add this argument to the mvn command
    Copyright 2014, 2015 Paul Worrall
 
    Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
+   you may not use this software except in compliance with the License.
    You may obtain a copy of the License at
 
      http://www.apache.org/licenses/LICENSE-2.0
