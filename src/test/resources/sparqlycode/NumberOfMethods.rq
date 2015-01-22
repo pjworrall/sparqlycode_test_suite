@@ -1,0 +1,7 @@
+PREFIX java: <http://www.interition.net/java/ref/>
+
+SELECT (COUNT (?method) AS ?NumberOfMethods) 
+WHERE {
+  ?class a java:Class .
+  ?class java:method ?method .
+}

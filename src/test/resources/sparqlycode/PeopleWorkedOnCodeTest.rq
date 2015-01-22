@@ -23,7 +23,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-ASK distinct ?Author ?Mbox  WHERE {
+ASK  WHERE {
+#select distinct ?Author ?Mbox  WHERE {
      ?class a java:Class ; isc:file ?file .	
      ?commit prov:used ?file ; a prov:Activity ; prov:wasAssociatedWith ?_person .
 	 ?_person foaf:mbox ?Mbox ; foaf:name ?Author .

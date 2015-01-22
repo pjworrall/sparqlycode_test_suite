@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
  # Licensed to the Apache Software Foundation (ASF) under one or more
  # contributor license agreements.  See the NOTICE file distributed with
@@ -17,12 +18,26 @@
 
 # This .rq file is solely to test queries, it has no specific role.
 # This finds methods and their respective classes with an excessive number of arguments. Eg 5
+=======
+# This counted the number of methods in a class
+
+>>>>>>> aa1217a3dd6a978954c0f0d9927f9cc43940e935
 
 PREFIX java: <http://www.interition.net/java/ref/>
-PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
+PREFIX sci: <http://www.interition.net/sparqlycode/id/>
+PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+<<<<<<< HEAD
 SELECT distinct ?p WHERE {
 ?class a java:Class .
 ?class ?p ?o
 }
+=======
+SELECT *
+	WHERE {
+	  net.interition.sparqlycode.testsuite:ForeignCodeUserClass ?p ?o .
+	}
+	
+	
+>>>>>>> aa1217a3dd6a978954c0f0d9927f9cc43940e935

@@ -34,6 +34,11 @@
 			<version>2.11.2</version>
 			<!-- <scope>test</scope> -->
 		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<pluginManagement>
@@ -110,8 +115,8 @@
 					<configuration>
     					<message>Testsuite SCCS KB Generation</message>
     					<outputfile>${project.build.testOutputDirectory}/sccs.ttl</outputfile>
-    					<startTag>refs/tags/0.0.1d</startTag>
-    					<endTag>refs/tags/0.0.1b</endTag>
+    					<startTag>refs/tags/0.0.2</startTag>
+    					<endTag>refs/tags/0.0.1c</endTag>
     					<identifier>id</identifier>
   					</configuration>
 				</plugin>
