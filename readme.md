@@ -67,6 +67,52 @@ If those darn tests are stopping you add this argument to the mvn command
 #### Running SPARQL queries from a unix shell with Jena ARQ
 
 	arq --data=${yourlocation}/sparqlycode.ttl --file=${mavenBuildDir}/src/test/resources/sparqlycode/query.rq
+	
+#### Using the SPARQL Junit framework in your own code
+
+To run SPARQL queries as JUnit tests that get reported by Maven Surefire Plugin etc there is an abstract class you can extend called SparqlycodeBaseTest.
+To use that class put the testsuite in your local Maven repository:
+
+	mvn install:install
+	
+Declare your use of it in your POM:
+
+		<dependency>
+			<groupId>net.interition</groupId>
+			<artifactId>testsuite</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+
+Then extend it in your JUnit test classes:
+
+	package net.interition;
+	
+	import static org.junit.Assert.*;
+	import net.interition.sparqlycode.testsuite.SparqlycodeBaseTest;
+	
+	import org.junit.Test;
+	
+	public class ExampleSparqlTestCase extends SparqlycodeBaseTest {
+	
+		@Test
+		public void test() {
+			fail("Not yet implemented");
+		}
+	
+	}		
+ 
+ Note it will need Apache Jena as a dependency:
+ 
+ 		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>apache-jena-libs</artifactId>
+			<type>pom</type>
+			<version>2.11.2</version>
+			<scope>test</scope>
+		</dependency>
+		
+.. and maybe a few others. Explore the test suite to snatch the config. and contribute the improved instructions here!
 
 #### Thanks to
 
