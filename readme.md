@@ -68,6 +68,9 @@ If those darn tests are stopping you add this argument to the mvn command
 
 	arq --data=${yourlocation}/sparqlycode.ttl --file=${mavenBuildDir}/src/test/resources/sparqlycode/query.rq
 
+####
+
+Thanks to Adam Nogradi, undergraduate at the University of Manchester, for his help, support and enthusiasm with this project. 
     
 #### Licensing
 
