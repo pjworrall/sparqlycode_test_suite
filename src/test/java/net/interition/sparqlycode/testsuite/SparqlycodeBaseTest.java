@@ -57,12 +57,22 @@ public class SparqlycodeBaseTest {
 		
 		this.model = ModelFactory.createDefaultModel();
 		
-		URL kb = this.getClass().getResource("/sparqlycode.ttl");
+		URL skb = this.getClass().getResource("/sparqlycode.ttl");
 		
-		if(kb == null) throw new IOException("Sparqlycode KB not found. Have you produced it yet?");
+		if(skb == null) throw new IOException("Sparqlycode KB not found. Have you produced it yet?");
 		
-		model.read(kb.toString());
-
+		model.read(skb.toString());
+		
+		// if we have a Maven BUILD KB add that to the model
+		
+		URL bkb = this.getClass().getResource("/pom.ttl");
+		
+		if(bkb != null) {
+			model.read(bkb.toString());
+		} else {
+			log.info("Build KB for Maven not found. Ignored.");
+		}
+		
 	}
 	
 
