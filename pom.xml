@@ -7,6 +7,9 @@
 	<name>Test Suite</name>
 	<description>This is a project specifically for generating sparqlycode rdf used for testing the Sparqlycode engine</description>
 	<packaging>jar</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -38,11 +41,10 @@
 
 	<profiles>
 		<profile>
-			<id>sparqlycode</id>
+			<id>publish-code-kb</id>
 			<properties>
 				<sparqlycode.lib>${env.SPARQLYCODE_HOME}/lib</sparqlycode.lib>
 				<subpackage>net.interition.sparqlycode</subpackage>
-				<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 			</properties>
 			<build>
 				<plugins>
@@ -54,7 +56,7 @@
 						<executions>
 							<execution>
 								<id>code-publisher</id>
-								<phase>compile</phase>
+								<phase>generate-sources</phase>
 								<goals>
 									<goal>javadoc</goal>
 								</goals>
@@ -121,31 +123,71 @@
 					</plugin>
 					-->
 
-					<!-- This plugin is for the SC SCCS KB publisher -->
+				</plugins>
+			</build>
+		</profile>
+		 <profile>
+			<id>publish-gito-sccs-kb</id>
+			<build>
+				<plugins>
 					<plugin>
 						<groupId>net.interition</groupId>
 						<artifactId>screpo-maven-plugin</artifactId>
-						<version>0.0.5-SNAPSHOT</version>
+						<version>0.0.7-SNAPSHOT</version>
 						<executions>
+						<!-- this binding should be the default on the mojo but it does not
+										seem to work so we are hard binding it -->
 							<execution>
-								<id>sccs-publisher</id>
-								<phase>compile</phase>
+								<id>gito-sccs-publish</id>
+								<phase>generate-sources</phase>
 								<goals>
 									<goal>screpo</goal>
 								</goals>
 							</execution>
 						</executions>
 						<configuration>
-							<message>Testsuite SCCS KB Generation</message>
-							<outputfile>sccs.ttl</outputfile>
+							<message>Testsuite GITO SCCS KB Generation</message>
+							<outputfile>gito4git.ttl</outputfile>
 							<startTag>refs/tags/0.0.2</startTag>
 							<endTag>refs/tags/0.0.1c</endTag>
-							<identifier>id</identifier>
+							<ontology>GITO</ontology>
+							<identifier>sccs.git</identifier>
 						</configuration>
 					</plugin>
-
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>publish-provo-sccs-kb</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>net.interition</groupId>
+						<artifactId>screpo-maven-plugin</artifactId>
+						<version>0.0.7-SNAPSHOT</version>
+						<executions>
+						<!-- this binding should be the default on the mojo but it does not
+										seem to work so we are hard binding it -->
+							<execution>
+								<id>provo-sccs-publish</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>screpo</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<message>Testsuite PROVO SCCS KB Generation</message>
+							<outputfile>provo4git.ttl</outputfile>
+							<startTag>refs/tags/0.0.2</startTag>
+							<endTag>refs/tags/0.0.1c</endTag>
+							<ontology>PROVO</ontology>
+							<identifier>sccs.git</identifier>
+						</configuration>
+					</plugin>
 				</plugins>
 			</build>
 		</profile>
 	</profiles>
+
 </project>
