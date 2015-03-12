@@ -19,7 +19,7 @@
 # this is not working yet
 # Adam Nogradi, Interition Ltd.
 
-PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX java: <http://ontology.interition.net/java/ref/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.example.org/>
 

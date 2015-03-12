@@ -20,7 +20,7 @@
 
 PREFIX maven: <http://www.interition.net/sparqlycode/maven/vocabulary/>
 PREFIX sc: <http://www.interition.net/sparqlycode/id>
-PREFIX isc: <http://www.interition.net/sparqlycode/vocabulary/>
+PREFIX isc: <http://ontology.interition.net/sparqlycode/vocabulary/>
 
 
 ASK WHERE { 

@@ -17,8 +17,8 @@
 # This checks that there is information about people who have worked on the code
 # Verify with git log --format='%aN' | sort -u
 
-PREFIX java: <http://www.interition.net/java/ref/>
-PREFIX isc:  <http://www.interition.net/sparqlycode/vocabulary/>
+PREFIX java: <http://ontology.interition.net/java/ref/>
+PREFIX isc:  <http://ontology.interition.net/sparqlycode/vocabulary/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>

@@ -18,7 +18,7 @@
 # Finds classes that extend Java.lang.Error
 # Adam Nogradi, Interition Ltd.
 
-PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX java: <http://ontology.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 
 ASK WHERE {

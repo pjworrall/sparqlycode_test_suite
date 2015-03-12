@@ -18,7 +18,7 @@
 # This tests checks an Enum type is not also marked as a Class
 # Paul Worrall, Interition Ltd.
 
-PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX java: <http://ontology.interition.net/java/ref/>
 PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
 PREFIX java.lang: <http://www.interition.net/sparqlycode/id/java/lang/>
 

@@ -1,4 +1,4 @@
-PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX java: <http://ontology.interition.net/java/ref/>
 
 SELECT (COUNT (?method) AS ?NumberOfMethods) 
 WHERE {

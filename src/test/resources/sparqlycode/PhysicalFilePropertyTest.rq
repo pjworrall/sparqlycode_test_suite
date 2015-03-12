@@ -17,8 +17,8 @@
  
 # This test checks that a top level Class, Enum or Interface has a file property
 
-PREFIX java: <http://www.interition.net/java/ref/>
-PREFIX isc:  <http://www.interition.net/sparqlycode/vocabulary/>
+PREFIX java: <http://ontology.interition.net/java/ref/>
+PREFIX isc:  <http://ontology.interition.net/sparqlycode/vocabulary/>
 PREFIX net.interition.sparqlycode.testsuite: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/testsuite/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 

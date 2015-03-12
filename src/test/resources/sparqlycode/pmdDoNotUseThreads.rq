@@ -18,7 +18,7 @@
 # Finds classes that extend Thread or implement Runnable.
 # Adam Nogradi, Interition Ltd.
 
-PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX java: <http://ontology.interition.net/java/ref/>
 PREFIX subject1: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 PREFIX subject2: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/DoNotUseThreads/>
 

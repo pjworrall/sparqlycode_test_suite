@@ -18,7 +18,7 @@
 # Finds methods with over 20 import statements.
 # Adam Nogradi, Interition Ltd.
 
-PREFIX java: <http://www.interition.net/java/ref/>
+PREFIX java: <http://ontology.interition.net/java/ref/>
 PREFIX subject: <http://www.interition.net/sparqlycode/id/net/interition/sparqlycode/pmdtestsuite/>
 
 ASK WHERE {
