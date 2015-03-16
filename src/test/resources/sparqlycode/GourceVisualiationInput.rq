@@ -1,0 +1,70 @@
+ # Licensed to the Apache Software Foundation (ASF) under one or more
+ # contributor license agreements.  See the NOTICE file distributed with
+ # this work for additional information regarding copyright ownership.
+ # The ASF licenses this file to You under the Apache License, Version 2.0
+ # (the "License"); you may not use this file except in compliance with
+ # the License.  You may obtain a copy of the License at
+ # 
+ #      http://www.apache.org/licenses/LICENSE-2.0
+ # 
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+
+ # This produces out in the form that be be fed into Gource to visualise change history
+ # gource needs an output of [unix time]|[author]|[A|M|D|etc.]|[file]
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX git:  <http://ontology.interition.net/sccs/git/ref/> 
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?Timestamp ?Name ?Change ?file  WHERE {
+
+	?_commit a  git:Commit ;
+			rdfs:label ?_label ;
+			git:difference ?_difference .
+			
+	BIND( SUBSTR(?_label, 0, 20) AS ?Commit )	
+			  
+	?_difference git:file ?file .
+	
+	#BIND(REPLACE(str(?file), '^.*(#|/)', "") AS ?localname)
+	  
+    ?_commit prov:endedAtTime ?_time ;
+     		prov:wasAssociatedWith ?agent .
+     
+    ?agent foaf:name ?Name .
+    
+    # create a suitable unix time string
+    BIND(( CONCAT(STR(YEAR(?_time)), 
+                     "-", 
+                     STR(MONTH(?_time)), 
+                     "-", 
+                     STR(DAY(?_time)),
+                     "T",
+                     STR(HOURS(?_time)),
+                     ":",
+                     STR(MINUTES(?_time)),
+                     ":",
+                     STR(SECONDS(?_time))
+                     ) 
+           ) as ?Timestamp)
+    
+    
+    # produce change type flag
+    
+    optional { ?_difference git:isModified ?_modified  . }
+
+    optional { ?_difference git:isAdded ?_added . }
+
+    optional { ?_difference git:isDeleted ?_deleted . }
+    
+    BIND(if(bound(?_added),"A", 
+              if(bound(?_modified),"M", 
+              if(bound(?_deleted),"D", "?"))) as ?Change )
+   
+} order by asc(?_time)

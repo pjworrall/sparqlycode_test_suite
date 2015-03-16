@@ -148,8 +148,8 @@
 						<configuration>
 							<message>Testsuite GITO SCCS KB Generation</message>
 							<outputfile>gito4git.ttl</outputfile>
-							<startTag>refs/tags/0.0.2</startTag>
-							<endTag>refs/tags/0.0.1c</endTag>
+							<startTag>refs/tags/0.0.3</startTag>
+							<endTag>refs/tags/0.0.1</endTag>
 							<ontology>GITO</ontology>
 							<identifier>sccs.git</identifier>
 						</configuration>
@@ -179,8 +179,8 @@
 						<configuration>
 							<message>Testsuite PROVO SCCS KB Generation</message>
 							<outputfile>provo4git.ttl</outputfile>
-							<startTag>refs/tags/0.0.2</startTag>
-							<endTag>refs/tags/0.0.1c</endTag>
+							<startTag>refs/tags/0.0.3</startTag>
+							<endTag>refs/tags/0.0.1</endTag>
 							<ontology>PROVO</ontology>
 							<identifier>sccs.git</identifier>
 						</configuration>
