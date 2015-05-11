@@ -5,9 +5,9 @@ SPARQLYCODE enables querying and linking of software artifacts, code, dependenci
 
 This is an example of the test suite that Interition uses itself to test that concepts in published Knowledge Base are correctly reflected.
 
-#### Java Concepts
+#### CODE KB - Java 
 
-The Sparqlycode KB Engine produces a Knowledge Base of Java code and its build configuration represented in the W3C RDF/OWL data schema.  This test suite has source code and other artefacts
+The CODE KB Engine produces a Knowledge Base of Java code represented in the W3C RDF/OWL data schema.  This test suite has source code and other artefacts
 manufactured to enable particular features in the KB to be tested. 
 
 * The test suite is configured with the required Maven plugins to generate the KB 
@@ -15,7 +15,7 @@ manufactured to enable particular features in the KB to be tested.
 * The test suite uses the API and tools from [Apache Jena](https://jena.apache.org/) to run SPARQL queries 
 
 
-#### Source Code Control Concepts
+#### SCCS KB - Source Code Control System 
 
 The SCCS KB Engine produces a Knowledge Base of the Source Code Control System history represented in the W3C RDF/OWL data schema and using the [W3C PROVO](http://www.w3.org/TR/prov-primer/) model
 for Provenance.  For those not familiar with W3C PROVO an additional model is also available that uses the specific concepts and vocabulary of the SCCS used.
@@ -23,20 +23,26 @@ for Provenance.  For those not familiar with W3C PROVO an additional model is al
 * [Git Ontology](http://www.interition.net/sparqlycode/vocabulary/git) TBD
 * [Subversion Ontology](http://www.interition.net/sparqlycode/vocabulary/svn) TBD
 
+#### BUILD KB - Maven build
+
+The BUILD KB Engine produces a Knowledge Base of a Maven Project Object Model (POM). The BUILD KB Engine is currently not a Maven plugin and is executed from a shell script. Therefore this is not yet available in the test suite.
+
 
 #### Documentation
 
-* [Sparqlycode KB installation guide](http://confluence.interition.net/todo)
-* [SCCS KB installation guide](http://confluence.interition.net/todo)
+* [Maven configuration guide](https://confluence.interition.net/display/SPAR/Maven+Configuration)
 
 #### Getting started
 
 ##### Required plugins
 
-To actually create a Sparqlycode KB and SCCS KB (Git only at the moment) you do need the plugins. Otherwise you are just using the testsuite to
+To run the tests and explore the test suite KB we have provided the latest test suite KB on our confluence site.
+
+* [Test suite KB] (https://confluence.interition.net/display/SPAR/Test+Suite+KB)
+
+To actually create the KB you do need the plugins. Otherwise you are just using the testsuite to
 look at the queries and how we made a simple SPARQL test framework that runs in Junit: Btw that is useful in itself.  We are not very mature in
-getting those plugins to you at the moment so watch this space.  If you desperately do want to try them get our help. We would have you up and
-running quite quickly we just have not automated the setup yet
+getting those plugins to you at the moment so watch this space. 
 
 [Ask us to help](mailto:info@interiton.net)
 
@@ -50,13 +56,14 @@ running quite quickly we just have not automated the setup yet
 
 	mvn dependency:sources eclipse:eclipse package
 
-#### Producing the Sparqlycode.ttl
+#### Producing the CODE KB
     
-    mvn javadoc:javadoc
+        mvn generate-sources -Ppublish-code-kb
 
-#### Producing the Sccs.ttl
+#### Producing the SCCS KB
 
-	mvn net.interition:screpo-maven-plugin:0.0.3-SNAPSHOT:screpo 
+        mvn generate-sources -Ppublish-gito-sccs-kb
+
 
 #### Skipping tests
 
