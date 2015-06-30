@@ -9,6 +9,8 @@
 	<packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<ver.start>refs/tags/0.0.4</ver.start>
+		<ver.end>refs/tags/0.0.1</ver.end>
 	</properties>
 
 	<dependencies>
@@ -71,12 +73,10 @@
 							<failOnError>true</failOnError>
 							<debug>true</debug>
 							<show>private</show>
-							<additionalparam>-file sparqlycode.ttl</additionalparam>
-							<additionalparam>-baseuri
-								http://www.interition.net/sparqlycode/id/</additionalparam>
+							<additionalparam>-file code.ttl -baseuri http://www.interition.net/sparqlycode/id/</additionalparam>
 							<subpackages>${subpackage}</subpackages>
 							<reportOutputDirectory>${basedir}</reportOutputDirectory>
-							<destDir>/src/test/resources</destDir>
+							<destDir>/sparqlycode</destDir>
 						</configuration>
 					</plugin>
 
@@ -146,10 +146,10 @@
 							</execution>
 						</executions>
 						<configuration>
-							<message>Testsuite GITO SCCS KB Generation</message>
-							<outputfile>gito4git.ttl</outputfile>
-							<startTag>refs/tags/0.0.3</startTag>
-							<endTag>refs/tags/0.0.1</endTag>
+							<message>GITO Ontology based SCCS KB for ${project.name}</message>
+							<outputfile>sparqlycode/gito4git.ttl</outputfile>
+							<startTag>${ver.start}</startTag>
+							<endTag>${ver.end}</endTag>
 							<ontology>GITO</ontology>
 							<identifier>sccs.git</identifier>
 						</configuration>
@@ -177,10 +177,10 @@
 							</execution>
 						</executions>
 						<configuration>
-							<message>Testsuite PROVO SCCS KB Generation</message>
-							<outputfile>provo4git.ttl</outputfile>
-							<startTag>refs/tags/0.0.3</startTag>
-							<endTag>refs/tags/0.0.1</endTag>
+							<message>PROVO Ontology based SCCS KB for ${project.name}</message>
+							<outputfile>sparqlycode/provo4git.ttl</outputfile>
+							<startTag>${ver.start}</startTag>
+							<endTag>${ver.end}</endTag>
 							<ontology>PROVO</ontology>
 							<identifier>sccs.git</identifier>
 						</configuration>
